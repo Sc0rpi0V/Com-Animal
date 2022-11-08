@@ -1,0 +1,122 @@
+@font-face {
+  font-family: "font-1";
+  src: url(../../assets/fonts/JosefinSans-Medium.ttf);
+}
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Fredoka One', cursive;
+  /*box-sizing: border-box; */
+}
+body {
+  background: #cac3c3;
+  font-family: "font-1", sans-serif;
+}
+li {
+  list-style-type: none;
+}
+
+.firstp {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+}
+
+.textabout {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.cards-container-home {
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 24px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+@media(min-width: 540px) {
+  .cards-container-home {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(min-width: 960px) {
+  .cards-container-home {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card-home {
+  position: relative;
+  padding-bottom: 60%;
+}
+
+.card-home-background {
+  background-size: cover;
+  background-position: center;
+  border-radius: 24px;
+  filter : brightness(0.75) saturate(1.2) contrast(0.85);
+  position: absolute;
+  left : 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  transform-origin: center;
+  transition: .2s;
+}
+
+.card-home:hover .card-home-background {
+  transform: scale(1.05) translateZ(0);
+}
+
+.cards-container-home:hover>.card-home:not(:hover) .card-home-background {
+  filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+}
+
+.card-home-content {
+  padding: 24px;
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.card-home-content p {
+  color : rgba(255, 255, 255, .9);
+  font-size: 12px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.card-home content h3 {
+  color :rgba(255, 255, 255, .9);
+  font-size: 25px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+}
+
+/* Page Check */
+  .check {
+    text-align: center;
+  }
+
+  .paracheck {
+    text-align: center;
+    margin-bottom: 0px;
+  }
+
+  .clickme {
+    text-align: center;
+  }
