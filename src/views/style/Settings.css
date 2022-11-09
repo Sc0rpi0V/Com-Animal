@@ -120,3 +120,7 @@ h1 {
   .clickme {
     text-align: center;
   }
+
+.project {
+  margin-bottom: -380px;
+}

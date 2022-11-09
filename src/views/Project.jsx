@@ -13,7 +13,7 @@ const Project = () => {
     }
 
     return (
-        <div>
+        <div className="project">
             <h1 className="check">Check</h1>
             <p className="paracheck"> Il faut juste entrer un texte, et le bouton affichera le texte saisi.</p>
             <div className="clickme">
