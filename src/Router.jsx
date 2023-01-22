@@ -6,6 +6,7 @@ import { Route, Routes } from "react-router-dom";
 import About from "./views/About";
 import Home from "./views/Home";
 import Project from "./views/Project";
+import Paiement from "./views/Paiement";
 import Countries from "./views/Countries";
 import Pokedex from "./views/Pokedex";
 import Contact from "./views/Contact";
@@ -21,6 +22,7 @@ const Router = () => {
             <Route exact path="/" element={<Home />} />
             <Route exact path="/about" element={<About />} />
             <Route exact path="/project" element={<Project />} />
+            <Route exact path="/paiement" element={<Paiement />} />
             <Route exact path="/countries" element={<Countries />} />
             <Route exact path="/pokedex" element={<Pokedex />} />
             <Route exact path="/contact" element={<Contact />} />

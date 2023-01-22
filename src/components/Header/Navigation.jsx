@@ -8,6 +8,7 @@ const Navigation = () => {
                 <li><NavLink to="/" className={(nav) => (nav.isActive ? "nav-active" : "")} >Home</NavLink></li>
                 <li><NavLink to="/about" className={(nav) => (nav.isActive ? "nav-active" : "")} >About</NavLink></li>
                 <li><NavLink to="/project" className={(nav) => (nav.isActive ? "nav-active" : "")} >Project</NavLink></li>
+                <li><NavLink to="/paiement" className={(nav) => (nav.isActive ? "nav-active" : "")}>Paiement</NavLink></li>
                 <li><NavLink to="/countries" className={(nav) => (nav.isActive ? "nav-active" : "")}>Countries</NavLink></li>
                 <li><NavLink to="/pokedex" className={(nav) => (nav.isActive ? "nav-active" : "")} >Pokedex</NavLink></li>
                 <li><NavLink to="/contact" className={(nav) => (nav.isActive ? "nav-active" : "")} >Contact Us</NavLink></li>
