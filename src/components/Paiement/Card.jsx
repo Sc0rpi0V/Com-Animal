@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Cards from 'react-credit-cards'
+// import Cards from 'react-credit-cards'
 
 const Container = styled.div`
   .rccs {
@@ -288,6 +288,6 @@ const Container = styled.div`
 
 export default props => (
   <Container>
-    <Cards {...props} />
+    {/* <Cards {...props} /> */}
   </Container>
 )
