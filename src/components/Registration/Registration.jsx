@@ -48,7 +48,7 @@ const RegistrationForm = () => {
     e.preventDefault();
   }
   return (
-    <div className="box">
+    <div className="box_registration">
       <div className="form_box">
         <h4>REGISTER FORM</h4>
         <form onSubmit={(e) => {handleSubmit(e)}}>
@@ -83,11 +83,11 @@ const RegistrationForm = () => {
             </label>
           </div>
           <button onClick={()=>handleSubmit()} type="submit" value="submit">Register</button>
-          <div className="registration_form">
+        </form>
+        <div className="registration_form">
             <span>Don't have an account ?</span>
             <a href="Connexion">Log In</a>
           </div>
-        </form>
       </div>
     </div>
   );

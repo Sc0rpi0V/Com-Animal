@@ -5,7 +5,7 @@ import Router from './Router';
 
 const App = () => {
   return (
-    <div className="App">
+    <div className="app">
       <TheHeader />
       <Router />
       <div className="prefooter">

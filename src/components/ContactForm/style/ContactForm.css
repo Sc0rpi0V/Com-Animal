@@ -1,362 +1,82 @@
-.box_contact {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 100px;
-}
-
-button {
-  margin-bottom: 72px;
-  margin-top: 72px;
-  width: 100px;
-  height: 50px;
-}
-
+/* Style pour la boîte du formulaire */
 .form_box_contact {
-  width: 700px;
-  height: 120px;
-  background: #1d022c;
+  width: 500px;
+  background-color: #f0f0f0;
+  padding: 20px;
   border-radius: 10px;
-  color: white;
-  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.439);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
 }
+
 .form_box_contact h4 {
   text-align: center;
-  margin-top: 50px;
-  font-size: 40px;
-  font-family: Arial,"Helvetica Neue", Helvetica, sans-serif;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
 }
 
-form {
-  display: flex;
-  flex-wrap: wrap;
+/* Style pour chaque champ du formulaire */
+.form_box_contact .input_civil_contact,
+.form_box_contact .input_name_contact,
+.form_box_contact .input_prenom_contact,
+.form_box_contact .input_email_contact,
+.form_box_contact .input_address_contact,
+.form_box_contact .input_ville_contact,
+.form_box_contact .input_postal_contact,
+.form_box_contact .input_phone_contact {
+  margin-bottom: 20px;
 }
 
-/* Civilite Start */
-
-form .input_civil_contact {
-  width: 600px;
-  margin-top: 83px;
-  margin-bottom: 83px;
-  position: relative;
-  border : 1px solid rgb(255, 255, 255, 0.618);
-  border-radius: 20px;
+.form_box_contact label {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  color: #555;
 }
 
-form .input_civil_contact:hover label {
-  top: -10px;
-  left : 20px;
-  background: #1d022c;
-}
-
-/* Civilite End */
-
-/* name Start */
-form .input_name_contact {
-  width: 600px;
-  margin-top: 83px;
-  margin-bottom: 83px;
-  position: relative;
-  border : 1px solid rgb(255, 255, 255, 0.618);
-  border-radius: 20px;
-}
-
-.input_name_contact input {
-  background: none;
-  width : 600px;
-  height : 70px;
-  border: none;
-  outline : none;
-  font-size: 30px;
-  padding-left: 10px;
-  color: white;
-}
-
-.input_name_contact label {
-  position: absolute;
-  top: 25px;
-  left: 20px;
-  font-family: Arial,"Helvetica Neue", Helvetica, sans-serif;
-  color: rgb(194, 192, 28);
-  font-size: 18px;
-  padding-left: 5px;
-  padding-right: 5px;
-  transition: all 0.4s ease;
-  text-align: center;
-}
-
-form .input_name_contact:hover label {
-  top: -10px;
-  left : 20px;
-  background: #1d022c;
-}
-/* name End */
-
-/* prenom Start */
-form .input_prenom_contact {
-  width: 600px;
-  margin-top: 83px;
-  margin-bottom: 83px;
-  position: relative;
-  border : 1px solid rgb(255, 255, 255, 0.618);
-  border-radius: 20px;
-}
-
-.input_prenom_contact input {
-  background: none;
-  width : 600px;
-  height : 70px;
-  border: none;
-  outline : none;
-  font-size: 30px;
-  padding-left: 10px;
-  color: white;
-}
-
-.input_prenom_contact label {
-  position: absolute;
-  top: 25px;
-  left: 20px;
-  font-family: Arial,"Helvetica Neue", Helvetica, sans-serif;
-  color: rgb(194, 192, 28);
-  font-size: 18px;
-  padding-left: 5px;
-  padding-right: 5px;
-  transition: all 0.4s ease;
-  text-align: center;
-}
-
-form .input_prenom_contact:hover label {
-  top: -10px;
-  left : 20px;
-  background: #1d022c;
-}
-/* prenom End */
-
-/* Email Start */
-form .input_email_contact {
-  width: 600px;
-  margin-top: 83px;
-  margin-bottom: 83px;
-  position: relative;
-  border : 1px solid rgb(255, 255, 255, 0.618);
-  border-radius: 20px;
-}
-
-.input_email_contact input {
-  background: none;
-  width : 600px;
-  height : 70px;
-  border: none;
-  outline : none;
-  font-size: 30px;
-  padding-left: 10px;
-  color: white;
-}
-
-.input_email_contact label {
-  position: absolute;
-  top: 25px;
-  left: 20px;
-  font-family: Arial,"Helvetica Neue", Helvetica, sans-serif;
-  color: rgb(194, 192, 28);
-  font-size: 18px;
-  padding-left: 5px;
-  padding-right: 5px;
-  transition: all 0.4s ease;
-  text-align: center;
-}
-
-form .input_email_contact:hover label {
-  top: -10px;
-  left : 20px;
-  background: #1d022c;
-}
-/* Email End */
-
-/* address Start */
-form .input_address_contact {
-  width: 600px;
-  margin-top: 83px;
-  margin-bottom: 83px;
-  position: relative;
-  border : 1px solid rgb(255, 255, 255, 0.618);
-  border-radius: 20px;
-}
-
-.input_address_contact input {
-  background: none;
-  width : 600px;
-  height : 70px;
-  border: none;
-  outline : none;
-  font-size: 30px;
-  padding-left: 10px;
-  color: white;
-}
-
-.input_address_contact label {
-  position: absolute;
-  top: 25px;
-  left: 20px;
-  font-family: Arial,"Helvetica Neue", Helvetica, sans-serif;
-  color: rgb(194, 192, 28);
-  font-size: 18px;
-  padding-left: 5px;
-  padding-right: 5px;
-  transition: all 0.4s ease;
-  text-align: center;
-}
-
-form .input_address_contact:hover label {
-  top: -10px;
-  left : 20px;
-  background: #1d022c;
-}
-/* address End */
-
-
-/* ville Start */
-form .input_ville_contact {
-  width: 600px;
-  margin-top: 83px;
-  margin-bottom: 83px;
-  position: relative;
-  border : 1px solid rgb(255, 255, 255, 0.618);
-  border-radius: 20px;
-}
-
-.input_ville_contact input {
-  background: none;
-  width : 600px;
-  height : 70px;
-  border: none;
-  outline : none;
-  font-size: 30px;
-  padding-left: 10px;
-  color: white;
-}
-
-.input_ville_contact label {
-  position: absolute;
-  top: 25px;
-  left: 20px;
-  font-family: Arial,"Helvetica Neue", Helvetica, sans-serif;
-  color: rgb(194, 192, 28);
-  font-size: 18px;
-  padding-left: 5px;
-  padding-right: 5px;
-  transition: all 0.4s ease;
-  text-align: center;
-}
-
-form .input_ville_contact:hover label {
-  top: -10px;
-  left : 20px;
-  background: #1d022c;
-}
-/* ville End */
-
-
-/* postal Start */
-form .input_postal_contact {
-  width: 600px;
-  margin-top: 83px;
-  margin-bottom: 83px;
-  position: relative;
-  border : 1px solid rgb(255, 255, 255, 0.618);
-  border-radius: 20px;
-}
-
-.input_postal_contact input {
-  background: none;
-  width : 600px;
-  height : 70px;
-  border: none;
-  outline : none;
-  font-size: 30px;
-  padding-left: 10px;
-  color: white;
-}
-
-.input_postal_contact label {
-  position: absolute;
-  top: 25px;
-  left: 20px;
-  font-family: Arial,"Helvetica Neue", Helvetica, sans-serif;
-  color: rgb(194, 192, 28);
-  font-size: 18px;
-  padding-left: 5px;
-  padding-right: 5px;
-  transition: all 0.4s ease;
-  text-align: center;
-}
-
-form .input_postal_contact:hover label {
-  top: -10px;
-  left : 20px;
-  background: #1d022c;
-}
-/* postal End */
-
-/* phone Start */
-form .input_phone_contact {
-  width: 600px;
-  margin-top: 83px;
-  margin-bottom: 83px;
-  position: relative;
-  border : 1px solid rgb(255, 255, 255, 0.618);
-  border-radius: 20px;
-}
-
-.input_phone_contact input {
-  background: none;
-  width : 600px;
-  height : 70px;
-  border: none;
-  outline : none;
-  font-size: 30px;
-  padding-left: 10px;
-  color: white;
-}
-
-.input_phone_contact label {
-  position: absolute;
-  top: 25px;
-  left: 20px;
-  font-family: Arial,"Helvetica Neue", Helvetica, sans-serif;
-  color: rgb(194, 192, 28);
-  font-size: 18px;
-  padding-left: 5px;
-  padding-right: 5px;
-  transition: all 0.4s ease;
-  text-align: center;
-}
-
-form .input_phone_contact:hover label {
-  top: -10px;
-  left : 20px;
-  background: #1d022c;
-}
-/* phone End */
-
-form .submit {
-  width: 170px;
-  border-radius: 10px;
-  margin-left: 100px;
-  height: 60px;
-  letter-spacing: 10px;
-  padding-left: 10px;
-  box-sizing: border-box;
-  font-size: 20px;
-  font-weight: 900;
-  color: white;
-  background: rgb(255, 208, 0);
+.form_box_contact input,
+.form_box_contact select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
   outline: none;
-  border: none;
-  transition: all 0.3s ease;
 }
 
-form .submit:hover {
-  box-shadow: 0 0 20px rgb(255, 208, 0);
+.form_box_contact select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'%3E%3C/path%3E%3C/svg%3E"),
+    linear-gradient(to bottom, #f9f9f9 0%, #f0f0f0 100%);
+  background-repeat: no-repeat, repeat;
+  background-position: right 0.7em top 50%, 0 0;
+  background-size: 0.65em auto, 100%;
+  padding-right: 3.5em;
 }
+
+/* Style pour le bouton de soumission */
+.form_box_contact button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form_box_contact button:hover {
+  background-color: #0056b3;
+}
+
+/* Style pour le lien "Sélectionner un choix" dans le select */
+.form_box_contact select option[value=""] {
+  color: #999;
+}
+
