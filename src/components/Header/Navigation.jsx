@@ -2,6 +2,7 @@ import "./style/Navigation.css";
 import logo from "../../img/logo.jpeg";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import i18next from '../../i18n';
 
 const Navigation = () => {
     const { t, i18n } = useTranslation();

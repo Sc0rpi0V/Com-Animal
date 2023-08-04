@@ -7,8 +7,11 @@ import {
   faLinkedin, faFacebookF, faTwitter, faTiktok, faGithub,
   faSlack, faWordpress, faReact , faSquareGit, faDocker} from "@fortawesome/free-brands-svg-icons";
 import Back1 from "../img/back-1.png";
+import { useTranslation } from "react-i18next";
 
 const About = () => {
+
+    const { t } = useTranslation();
 
     return (
         <div>
