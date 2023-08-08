@@ -1,0 +1,44 @@
+/* style/Settings.css */
+
+.settings {
+  width: 400px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cache-settings p {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.cache-settings label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.cache-settings input[type="checkbox"] {
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.cache-settings button {
+  display: block;
+  margin-top: 15px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.cache-settings button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

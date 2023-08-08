@@ -8,6 +8,7 @@ import userscontact from "../img/users_contact.jpg";
 import connexion from "../img/connexion.jpg";
 import registration from "../img/registration.jpg";
 import Card from "../components/Card";
+import CookieConsentPopup from "../components/Cookies/CookiesPop"; 
 
 const menuLinks = [
     {
@@ -62,10 +63,13 @@ const menuLinks = [
 
 const Home = () => {
     return (
-        <div className="cards-container-home">
-            {menuLinks.map(link => {
-                return <Card link={link} key={link.name} />
-            })}
+        <div>
+            <div className="cards-container-home">
+                {menuLinks.map(link => {
+                    return <Card link={link} key={link.name} />
+                })}
+            </div>
+            <CookieConsentPopup /> 
         </div>
     );
 }

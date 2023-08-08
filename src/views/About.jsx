@@ -11,17 +11,31 @@ import { useTranslation } from "react-i18next";
 
 const About = () => {
 
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+
+    const getWordOrder = () => {
+        return i18n.language === "fr" ? <><span>{t('developer')} </span>{t('backend')}</> : <>{t('backend')} <span>{t('developer')}</span></>;
+    };
+
+    const getWordOrder2 = () => {
+        return i18n.language === "fr" ? <>{t('developer')} {t('backend')}</> : <>{t('backend')} {t('developer')}</>;
+    };
+
+    const getWordOrder3 = () => {
+        return i18n.language === "fr" ? <>{t('Techno')} {t('backend')}</> : <>{t('backend')} {t('techno')}</>;
+    };
+
+    const getWordOrder4 = () => {
+        return i18n.language === "fr" ? <>{t('Gestion')} {t('backend')}</> : <>{t('backend')} {t('management')}</>;
+    };
 
     return (
         <div>
             <div className="text-box">
-                <h1>Hello I'm a</h1>
-                <h2>Back-End<span> Developer</span></h2>
-                <p className="firstp">
-                    Bonjour à tous et bienvenue sur mon premier site en React.
-                </p>
-                <p className="framework"> Technologies</p>
+                <h1>{t('hello')}</h1>
+                <h2>{getWordOrder()}</h2>
+                <p className="firstp">{t('firstp')}</p>
+                <p className="framework">{t('technology')}</p>
                 <ul className="technos-list">
                     <li>SQL</li>
                     <li>AS400</li>
@@ -40,64 +54,41 @@ const About = () => {
                         <img src={ImgProfil} alt="Profile" className="profile-img" />
                     </div>
                     <div className="about-text">
-                        <h1 className="sub-title">About Me</h1>
-                        <h2> A Story of HardWork and Perseverance</h2>
-                        <p className="textabout">
-                            Passionné d'informatique depuis plus de 10 ans maintenant, je me suis lancé dans le monde de la programmation web en solo.
-                            Ayant une formation dans le mileu du réseaux informatique (RIMS = Réseaux Informatiques Mobilité et Sécurité).
-                        </p>
-                        <p className="textabout">
-                            Je réalise quelque sites ou quelques codes afin de pouvoir garder la main sur certains Langages de programmation 
-                            (Java, Javascript, PHP, C/C#), afin de ne pas être en retard sur les dernières technologies et dernières mises à jour. 
-                            Ayant un esprit rapide et une facilité de compréhension, cela me permet de pouvoir interpréter et 
-                            mettre en place assez facilement et rapidement ce que l'on me demande.
-                        </p>
+                        <h1 className="sub-title">{t('aboutMe')}</h1>
+                        <h2>{t('story')}</h2>
+                        <p className="textabout">{t('passionateComputer')}</p>
+                        <p className="textabout">{t('realisation')}</p>
                     </div>
                     <DownloadButton />
                 </div>
             </div>
             <div className="services">
                 <div className="container-services">
-                    <h1 className="my-title"> My Services</h1>
+                    <h1 className="my-title">{t('myServices')}</h1>
                     <div className="services-list">
                         <div className="first">
                             <FontAwesomeIcon icon={faSlack} size="5x" />
-                            <h2> Back-End Developer </h2>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tristique nibh at arcu scelerisque venenatis. Proin euismod 
-                                facilisis dolor, id ullamcorper dui aliquam at. Proin nisi tortor, hendrerit vitae eros vitae, condimentum finibus ex. Aenean ex 
-                                eros, iaculis in sapien id, commodo congue nibh. Fusce pharetra facilisis felis, sit amet cursus nisi euismod sed. Mauris vitae 
-                                congue mauris, tincidunt elementum eros. 
-                            </p>
+                            <h2>{getWordOrder2()}</h2>
+                            <p>{t('infoBack')}</p>
                         </div>
                         <div className="second">
                             <FontAwesomeIcon icon={faWordpress} size="5x" />
                             <FontAwesomeIcon icon={faReact} size="5x" />
-                            <h2> Back-End Techno </h2>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tristique nibh at arcu scelerisque venenatis. Proin euismod 
-                                facilisis dolor, id ullamcorper dui aliquam at. Proin nisi tortor, hendrerit vitae eros vitae, condimentum finibus ex. Aenean ex 
-                                eros, iaculis in sapien id, commodo congue nibh. Fusce pharetra facilisis felis, sit amet cursus nisi euismod sed. Mauris vitae 
-                                congue mauris, tincidunt elementum eros. 
-                            </p>
+                            <h2>{getWordOrder3()}</h2>
+                            <p>{t('infoTechno')}</p>
                         </div>
                         <div className="third">
                             <FontAwesomeIcon icon={faDocker} size="5x" />
                             <FontAwesomeIcon icon={faSquareGit} size="5x" />
-                            <h2> Back-End Gestion </h2>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tristique nibh at arcu scelerisque venenatis. Proin euismod 
-                                facilisis dolor, id ullamcorper dui aliquam at. Proin nisi tortor, hendrerit vitae eros vitae, condimentum finibus ex. Aenean ex 
-                                eros, iaculis in sapien id, commodo congue nibh. Fusce pharetra facilisis felis, sit amet cursus nisi euismod sed. Mauris vitae 
-                                congue mauris, tincidunt elementum eros. 
-                            </p>
+                            <h2>{getWordOrder4()}</h2>
+                            <p>{t('infoGestion')}</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div className="portfolio">
                 <div className="container-portfolio">
-                    <h1 className="sub-porto"> My Portfolio</h1>
+                    <h1 className="sub-porto">{t('portfolio')}</h1>
                     <div className="work-list">
                         <div className="work">
                             <img src={Back1} alt="Back" className="back-img" />
@@ -153,7 +144,7 @@ const About = () => {
             <div className="container-contact">
                 <div className="row">
                     <div className="contact-left">
-                        <h1 className="sub-title-contact"> Contact Me </h1>
+                        <h1 className="sub-title-contact">{t('contactMe')}</h1>
                         <p><i className="fa-solid fa-paper-plane"></i> valentinc.boury@gmail.com </p>
                         <p><i className="fa-sharp fa-solid fa-phone"></i> 0772266018 </p>
                         <div className="social-icons">
@@ -206,7 +197,7 @@ const About = () => {
                             <input type="text" name="Name" placeholder="Your Name" required />
                             <input type="email" name="email" placeholder="Your Email" required />
                             <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                            <button type="submit" className="btn3">Submit</button>
+                            <button type="submit" className="btn3">{t('submit')}</button>
                         </form>
                     </div>
                 </div>

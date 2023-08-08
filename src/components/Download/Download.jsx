@@ -1,6 +1,7 @@
 import React from 'react';
 import PDFFile from '../../pdf/CV_Valentin_BOURY.pdf';
 import "./style/Download.css";
+import { useTranslation } from "react-i18next";
 
 const DownloadButton = () => {
   const handleDownload = () => {
@@ -9,14 +10,12 @@ const DownloadButton = () => {
     window.open(cvDownloadLink, '_blank');
   };
 
+  const { t } = useTranslation();
+
   return (
     <div className="download">
-        <p className="information_cv">
-            Voici un aperçu de mon profil, avec mes différentes expériences et formations que j'ai pu suivre.
-            N'hésitez pas à me contacter si vous souhaitez plus d'informations.
-            <button onClick={handleDownload} className="download-button">
-                Télécharger le CV
-            </button>
+        <p className="information_cv">{t('informationCV')}
+            <button onClick={handleDownload} className="download-button">{t('downloadCV')}</button>
         </p>
     </div>
   );

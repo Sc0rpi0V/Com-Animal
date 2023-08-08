@@ -1,0 +1,41 @@
+/* Style de la pop-up */
+.cookie-popup {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    z-index: 9999;
+  }
+  
+  .cookie-popup.active {
+    display: block;
+  }
+  
+  /* Style du contenu de la pop-up */
+  .cookie-popup-content {
+    text-align: center;
+  }
+  
+  .cookie-popup-content p {
+    margin: 0;
+    padding-bottom: 10px;
+  }
+  
+  .cookie-popup-content button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .cookie-popup-content button:hover {
+    background-color: #0056b3;
+  }
+  

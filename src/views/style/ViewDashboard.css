@@ -1,0 +1,178 @@
+body {
+    min-height: 100vh;
+}
+
+.dashboard-container {
+    display: flex;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.dashboard-title {
+    color: white;
+}
+
+
+.heading {
+    color: #00B4fc;
+    padding: 8px 12px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 9);
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.heading:hover {
+    color: white;
+}
+
+.btn {
+    background: #0163a0;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    border-radius: 5px;
+    transition: 0.5s ease;
+}
+
+.btn:hover {
+    background: #fff;
+    color: #171427;
+    border: 2px solid #171427;
+}
+
+.side-menu {
+    background: #919098;
+    width: 20vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.side-menu .brand-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.side-menu ul {
+    margin-top: 30px;
+}
+
+.side-menu li {
+    font-size: 24px;
+    padding: 10px 40px;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.side-menu li:hover {
+    opacity: 10;
+    background: white;
+    color: #171427;
+}
+
+.dashboard-container .content-dashboard {
+    position: relative;
+    margin-top: 10vh;
+    min-height: 90vh;
+    flex: 1;
+}
+
+.dashboard-container .content-dashboard .cards {
+    padding: 20px 15px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard-container .content-dashboard .cards .card {
+    height: 150px;
+    border-radius: 10px;
+    background: #919098;
+    margin: 20px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.dashboard-container .content-dashboard .cards .card .box h1 {
+    color: #00B4fc;
+}
+
+.dashboard-container .content-dashboard .cards .card .box h3 {
+    margin-top: 8px;
+    color: rgb(188, 187, 187);
+}
+
+.dashboard-container .content-dashboard .content-dashboard-2 {
+    min-height: 60vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+}
+
+.dashboard-container .content-dashboard .recent-payments {
+    min-height: 50vh;
+    flex: 5;
+    background: #171427;
+    margin: 0 25px 25px 25px;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    flex-direction: column;
+}
+
+.dashboard-container .content-dashboard .new-customers {
+    min-height: 50vh;
+    flex: 2;
+    background: #171427;
+    margin: 0 25px 25px 25px;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    flex-direction: column;
+}
+
+.dashboard-container .content-dashboard-2 .h2 {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px 10px;
+    border-bottom: 2px solid #999;
+}
+
+.table {
+    padding: 10px;
+}
+
+.white {
+    color: #00B4fc;
+    font-size: 1.2rem;
+}
+
+th,tr {
+    text-align: left;
+    padding: 8px;
+    color: rgb(188, 187, 187);
+}
