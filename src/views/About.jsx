@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style/About.css";
 import ImgProfil from "../img/profil.jpg";
 import DownloadButton from "../components/Download/Download";
@@ -8,6 +8,7 @@ import {
   faSlack, faWordpress, faReact , faSquareGit, faDocker} from "@fortawesome/free-brands-svg-icons";
 import Back1 from "../img/back-1.png";
 import { useTranslation } from "react-i18next";
+import axios from 'axios';
 
 const About = () => {
 
@@ -27,6 +28,31 @@ const About = () => {
 
     const getWordOrder4 = () => {
         return i18n.language === "fr" ? <>{t('Gestion')} {t('backend')}</> : <>{t('backend')} {t('management')}</>;
+    };
+
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        message: ""
+    });
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+
+        try {
+            const response = await axios.post('http://localhost:3001/send-email', formData);
+            console.log(response.data); // Le message renvoyé par le serveur
+        } catch (error) {
+            console.error(error);
+        }
+    };
+
+    const handleInputChange = (event) => {
+        const { name, value } = event.target;
+        setFormData({
+            ...formData,
+            [name]: value
+        });
     };
 
     return (
@@ -193,11 +219,32 @@ const About = () => {
                         </div>
                     </div>
                     <div className="contact-right">
-                        <form>
-                            <input type="text" name="Name" placeholder="Your Name" required />
-                            <input type="email" name="email" placeholder="Your Email" required />
-                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                            <button type="submit" className="btn3">{t('submit')}</button>
+                        <form onSubmit={handleSubmit}>
+                            <input
+                                type="text"
+                                name="name"
+                                value={formData.name}
+                                onChange={handleInputChange}
+                                placeholder="Your Name"
+                                required
+                            />
+                            <input
+                                type="email"
+                                name="email"
+                                value={formData.email}
+                                onChange={handleInputChange}
+                                placeholder="Your Email"
+                                required
+                            />
+                            <textarea
+                                name="message"
+                                value={formData.message}
+                                onChange={handleInputChange}
+                                rows="6"
+                                placeholder="Your Message"
+                                required
+                            />
+                            <button type="submit">Envoyer</button>
                         </form>
                     </div>
                 </div>

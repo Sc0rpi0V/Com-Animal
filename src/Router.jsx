@@ -3,7 +3,10 @@
 // Copy and paste the following code into the file:
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+import Login from "./views/Login";
+import Register from "./views/Register";
 import About from "./views/About";
+import Travel from "./views/Travel";
 import DashBoard from "./views/Dashboard";
 import UserManagement from "./views/UserManagement";
 import CreditCardForm from "./views/CreditCardForm";
@@ -14,7 +17,6 @@ import Countries from "./views/Countries";
 import Settings from "./views/Settings";
 //import Pokedex from "./views/Pokedex";
 // import Contact from "./views/Contact";
-import Connexion from "./views/Connexion";
 import Registration from "./views/Registration";
 import Users from "./views/Users";
 import NotFound from "./views/NotFound";
@@ -24,7 +26,10 @@ const Router = () => {
     return (
         <Routes>
             <Route exact path="/" element={<Home />} />
+            <Route exact path="/login" element={<Login />} />
+            <Route exact path="/register" element={<Register />} />
             <Route exact path="/about" element={<About />} />
+            <Route exact path="/travel" element={<Travel />} />
             <Route exact path="/dashboard" element={<DashBoard />} />
             <Route path="/dashboard/users" element={<UserManagement />} />
             <Route path="/dashboard/payments" element={<CreditCardForm />} />
@@ -35,7 +40,6 @@ const Router = () => {
             <Route exact path="/settings" element={<Settings />} />
             {/* <Route exact path="/contact" element={<Contact />} /> */}
             <Route exact path="/users" element={<Users />} />
-            <Route exact path="/connexion" element={<Connexion />} />
             <Route exact path="/registration" element={<Registration />} />
             <Route exact path="/galleryboat" element={<GalleryBoat />} />
             <Route exact path="*" element={<NotFound />} />

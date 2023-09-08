@@ -1,76 +1,22 @@
 import "./style/Settings.css";
-import about_me from "../img/about_me.jpg";
-import project from "../img/check.jpg";
-import countries from "../img/countries.jpg";
-import pokedex from "../img/pokedex.jpg";
-import contactus from "../img/contact_us.jpg";
-import userscontact from "../img/users_contact.jpg";
-import connexion from "../img/connexion.jpg";
-import registration from "../img/registration.jpg";
-import Card from "../components/Card";
-import CookieConsentPopup from "../components/Cookies/CookiesPop"; 
-
-const menuLinks = [
-    {
-        name: "About",
-        backgroundImage: about_me,
-        title: "About",
-        subTitle: "React Site"
-    },
-    {
-        name: "Project",
-        backgroundImage: project,
-        title: "Project",
-        subTitle: "React Site"
-    },
-    {
-        name: "Countries",
-        backgroundImage: countries,
-        title: "Countries",
-        subTitle: "React Site"
-    },
-    {
-        name: "Pokedex",
-        backgroundImage: pokedex,
-        title: "Pokedex",
-        subTitle: "React Site"
-    },
-    {
-        name: "Contact",
-        backgroundImage: contactus,
-        title: "Contact Us",
-        subTitle: "React Site"
-    },
-    {
-        name: "Users",
-        backgroundImage: userscontact,
-        title: "Users Contact",
-        subTitle: "React Site"
-    },
-    {
-        name: "Connexion",
-        backgroundImage: connexion,
-        title: "Connexion",
-        subTitle: "React Site"
-    },
-    {
-        name: "Registration",
-        backgroundImage: registration,
-        title: "Registration",
-        subTitle: "React Site"
-    }
-]
+import Header from "../components/Header/Header";
 
 const Home = () => {
     return (
-        <div>
-            <div className="cards-container-home">
-                {menuLinks.map(link => {
-                    return <Card link={link} key={link.name} />
-                })}
+        <>
+        <Header />
+            <div className="profile-description">
+                <h1 className="profile-name">Valentin BOURY</h1>
+                <p className="profile-summary">
+                    Passionné par le développement Backend, je fusionne la puissance de la technologie 
+                    avec la créativité du code pour créer des expériences en ligne exceptionnelles. 
+                    Ma boîte à outils inclut une gamme de technologies, allant de React pour construire 
+                    des interfaces utilisateur dynamiques, à PHP pour créer des bases de données robustes 
+                    et des logiques serveur complexes. Je jongle avec Javascript, HTML et CSS pour donner 
+                    vie à mes idées, en créant des sites Web fluides et esthétiquement plaisants.
+                </p>
             </div>
-            <CookieConsentPopup /> 
-        </div>
+        </>
     );
 }
 

@@ -1,66 +1,38 @@
-/* Navigation.css */
-.navigation ul {
-  display: flex;
-  margin: 30px;
+/* Reset */
+
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.navigation ul li {
-  /* Remove the styles from the anchor and apply them directly to the li */
-  list-style: none;
-  padding: 10px;
+body, html {
+  width: 100%;
+  height: auto;
+  scroll-behavior: smooth;
+  background: #000;
 }
 
-.navigation ul li a {
+ul, li {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+a {
+  font-weight: 700;
   text-decoration: none;
-  color: #61dafb;
-  transition: 0.2s;
-  cursor: pointer;
+  color: #f1f1f1;
+  transition: color 0.2s ease-in-out;
 }
 
-.navigation ul li:hover a {
-  color: #282c34;
+a:hover {
+  color: #ffa600;
 }
 
-/* Target the active link using the NavLink's activeClassName prop */
-.navigation ul li a.nav-active {
-  position: relative;
-}
-
-.navigation ul li a.nav-active::after {
-  content: "";
-  height: 4px;
-  width: 0;
-  background: #61dafb;
-  position: absolute;
-  border-radius: 10px;
-  bottom: 0px;
-  left: 50%;
-  transform: translateX(-50%);
-  transition: width 0.3s ease;
-}
-
-.navigation ul li a.nav-active:hover::after {
-  width: 100%;
-}
-
-.navigation {
-  padding: 4%;
-  color: white;
-  background-size: cover;
-  background-position: center;
-  background-color: #101112;
-  position: relative;
-}
-
-nav {
-  display: flex;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 15px 8%;
-  align-items: center;
-  z-index: 10;
+.lien-active {
+  color: #ffa600;
+  pointer-events: none;
+  cursor: default;
 }
 
 img {
@@ -71,13 +43,179 @@ img {
   margin-right: 10px;
 }
 
+/* ############################################# Navigation */
+
+nav {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: fixed;
+  background: #000;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 500;
+  transition: height 0.5s ease-in;
+}
+
+.social-nav {
+  margin: 1.5rem 0;
+}
+
+.social-nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.social-nav ul li {
+  margin: 0 1rem;
+}
+
+.principal-nav ul {
+  list-style-type: none;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 80px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  background: #0b0b0b;
+}
+
+.principal-nav ul li {
+  margin: 1rem 0;
+}
+
+.principal-nav a {
+  font-size: 25px;
+  position: relative;
+  padding: 0.2rem;
+}
+
+.principal-nav a::before {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffa600;
+  border-radius: 5px;
+  transition: width 0.2s ease-in;
+}
+
+.principal-nav a::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffa600;
+  border-radius: 5px;
+  transition: width 0.2s ease-in;
+}
+
+.principal-nav a:hover::before,
+.principal-nav a:hover::after {
+  width: 100%;
+}
+
+nav.active {
+  height: 100vh;
+}
+
+nav.active ul {
+  opacity: 1;
+  transition: opacity 0.2s ease-in 0.5s;
+}
+
+nav.font-scroll {
+  background: #0b0b0b;
+  box-shadow: 0 0 2px 2px rgba(255, 255, 255, 0.2)
+}
+nav.font-scroll {
+  background: #000;
+  box-shadow: 0 0 5px 0 rgba(255,255,255,0.6);
+  border-bottom: 1px solid #f1f1f1;
+}
+/* Burger */
+.burger {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  cursor: pointer;
+  z-index: 2000;
+}
+
+.burger-ligne {
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  background: #f1f1f1;
+  position: absolute;
+  transition: width 0.2s ease-in,
+      top 0.2s ease-in,
+      transform 0.2s ease-in-out 0.2s,
+      background 0.2s ease-in-out 0.2s;
+}
+
+.burger-ligne:nth-child(1) {
+  top: 15px;
+}
+
+.burger-ligne:nth-child(2) {
+  top: 30px;
+}
+
+.burger:hover .burger-ligne:nth-child(1) {
+  width: 80%;
+}
+
+.burger:hover .burger-ligne:nth-child(2) {
+  width: 60%;
+}
+
+.burger.active .burger-ligne:nth-child(1) {
+  top: 25px;
+  transform: rotate(-130deg);
+  background: #ffa600;
+}
+
+.burger.active .burger-ligne:nth-child(2) {
+  top: 25px;
+  transform: rotate(130deg);
+  background: #ffa600;
+}
+
+.burger.active.burger:hover .burger-ligne:nth-child(1),
+.burger.active.burger:hover .burger-ligne:nth-child(2) {
+  width: 100%;
+}
+
 select {
   background-color: #fff;
   color: #333;
   border: 1px solid #ccc;
   padding: 5px;
-  border-radius: 5px;
+  border-radius: 3px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 8px;
+  margin-top: 22px;
   margin-left: 10px;
+  appearance: none;
 }
