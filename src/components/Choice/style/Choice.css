@@ -1,0 +1,63 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    width: 100%;
+    height: auto;
+    scroll-behavior: smooth;
+    background: #000;
+}
+
+a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+a {
+    font-weight: 700;
+    text-decoration: none;
+    color: #f1f1f1;
+    transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+    color: #ffa600;
+}
+
+.lien-active {
+    color: #ffa600;
+    pointer-events: none;
+    cursor: default;
+}
+
+.choice {
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    background: #ffa600;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.choice img {
+    width: 150px;
+    height: 127px;
+}
+
+.card-choice {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.choice a {
+    font-size: calc(13px + 0.2vw);
+}
+
+.choice a:hover {
+    color: #333;
+}

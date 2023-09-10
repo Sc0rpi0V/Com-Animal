@@ -20,7 +20,7 @@ h1,h2 {
     font-family: "Secular One", sans-serif;
 }
 
-/* a {
+a {
     font-weight: 700;
     text-decoration: none;
     color: #f1f1f1;
@@ -29,7 +29,7 @@ h1,h2 {
 
 a:hover {
     color: #ffa600;
-} */
+}
 
 p {
     font-size: calc(13px + 0.2vw)
@@ -103,6 +103,7 @@ p {
     background: #ffa600;
     box-shadow: 0 0 0 0 rgb(173,226,226,0.4);
         transition: box-shadow 0.2s ease-in;
+    margin-right: 1rem;
 }
 
 .home-btn2:hover {
@@ -120,6 +121,29 @@ p {
     background: #ffa600;
     box-shadow: 0 0 10px 7px rgb(173, 226, 226, 0.4);
 }
+/* 
+.home-btn3 {
+    box-shadow: 0 0 0 0 rgb(173, 226, 226, 0.4);
+    transition: box-shadow 0.2s ease-in,
+    background 0.2s ease-in;
+    margin-right: 1rem;
+}
+
+.home-btn3:hover {
+    background: #ffa600;
+    box-shadow: 0 0 10px 7px rgb(173, 226, 226, 0.4);
+}
+
+.home-btn4 {
+    border: 1px solid #ffa600;
+    background: #ffa600;
+    box-shadow: 0 0 0 0 rgb(173,226,226,0.4);
+        transition: box-shadow 0.2s ease-in;
+}
+
+.home-btn4:hover {
+    box-shadow: 0 0 10px 7px rgb(173, 226, 226, 0.4);
+} */
 
 @media screen and (min-width: 780px) and (max-width: 1200px) {
     .home-btn {

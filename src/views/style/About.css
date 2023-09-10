@@ -132,18 +132,18 @@ body {
 
 /* SERVICES */
 
-.services {
+/* .services {
   width: 100%;
   height: 100%;
   background-color: #101112;
-}
+} */
 
-.my-title {
+/* .my-title {
   color: #24D97C;
   text-align: center;
   font-size: 50px;
   padding-top: 150px;
-}
+} */
 
 .services-list {
   display: grid;

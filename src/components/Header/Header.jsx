@@ -8,10 +8,12 @@ const Header = () => {
       <h1>Développons votre <span>Projet</span> ensemble !</h1>
       <h2>Valentin BOURY</h2>
       <hr />
-      <p>Développeur Full-Stack</p>
+      <p>Développeur Back-End</p>
       <div className="home-btns">
-        <a href="#portfolio" className="home-btn home-btn1">Portfolio</a>
-        <a href="#contact" className="home-btn home-btn2">Me Contacter</a>
+        <a href="/descriptionaboutme" className="home-btn home-btn1" target="_blank">A Propos de Moi</a>
+        <a href="/contactme" className="home-btn home-btn2" target="_blank">Me Contacter</a>
+        {/* <a href="/travel" className="home-btn home-btn3" target="_blank">Mon Parcours</a>
+        <a href="/about" className="home-btn home-btn4" target="_blank">Portfolio</a> */}
       </div>
     </header>
   );

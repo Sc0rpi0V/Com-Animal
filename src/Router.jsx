@@ -21,12 +21,16 @@ import Registration from "./views/Registration";
 import Users from "./views/Users";
 import NotFound from "./views/NotFound";
 import GalleryBoat from "./views/Galleryfirst";
+import DescriptionAboutMe from "./views/DescriptionAboutMe";
+import ContactMeInfo from "./views/ContactMeinfo";
 
 const Router = () => {
     return (
         <Routes>
             <Route exact path="/" element={<Home />} />
             <Route exact path="/login" element={<Login />} />
+            <Route exact path="/descriptionaboutme" element={<DescriptionAboutMe />} />
+            <Route exact path="/contactme" element={<ContactMeInfo />} />
             <Route exact path="/register" element={<Register />} />
             <Route exact path="/about" element={<About />} />
             <Route exact path="/travel" element={<Travel />} />

@@ -1,0 +1,93 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    width: 100%;
+    height: auto;
+    scroll-behavior: smooth;
+    background: #000;
+}
+
+h3 {
+    font-family: "Secular One", sans-serif;
+}
+
+a {    
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-weight: 700;
+    text-decoration: none;
+    color: #f1f1f1;
+    transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+    color: #ffa600;
+}
+
+.lien-active {
+    color: #ffa600;
+    pointer-events: none;
+    cursor: default;
+}
+
+.portfolio {
+    width: 100%;
+    max-width: 1200px;
+    margin: 3rem auto;
+    background: #000000;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1rem;
+    padding: 0 1rem;
+}
+  
+.card-portfolio {
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 7px 4px rgba(8,66,73,0.6);
+}
+  
+.card-portfolio img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.2s ease-in,
+                filter 0.2s ease-in;
+    filter: grayscale();
+}
+  
+.card-portfolio img:hover {
+    transform: scale(1.2);
+    filter: none;
+}
+  
+.card-portfolio-infos {
+    color: rgba(8,66,73,0.7);
+    font-size: calc(18px + 0.2vw);
+    position: absolute;
+    width: 100%;
+    height: 105px;
+    line-height: 105px;
+    text-align: center;
+    opacity: 0.5;
+    background: rgb(255,255,255,0.8);
+    bottom: -105px;
+    left: 0;
+    pointer-events: none;
+    cursor: default;
+    right: 0;
+    transition: bottom 0.2s ease-in-out,
+    opacity 0.2s ease-in-out;
+}
+  
+.card-portfolio h3 {
+    font-family: 'Secular One', cursive;
+}
+  
+.card-portfolio:hover .card-portfolio-infos {
+    bottom: 0;
+    opacity: 1;
+}

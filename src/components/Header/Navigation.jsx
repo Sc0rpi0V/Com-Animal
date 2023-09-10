@@ -57,18 +57,18 @@ const Navigation = () => {
             <div className="social-nav">
                 <ul>
                     <li><a href="https://www.facebook.com/BboyVal/" target="_blank" rel="noopener noreferrer" onClick={handleNavLinkClick}><FontAwesomeIcon icon={faFacebookF} /></a></li>
-                    <li><a href="https://www.facebook.com/BboyVal/" target="_blank" rel="noopener noreferrer" onClick={handleNavLinkClick}><FontAwesomeIcon icon={faGithub} /></a></li>
-                    <li><a href="https://www.facebook.com/BboyVal/" target="_blank" rel="noopener noreferrer" onClick={handleNavLinkClick}><FontAwesomeIcon icon={faTiktok} /></a></li>
-                    <li><a href="https://www.facebook.com/BboyVal/" target="_blank" rel="noopener noreferrer" onClick={handleNavLinkClick}><FontAwesomeIcon icon={faTwitter} /></a></li>
-                    <li><a href="https://www.facebook.com/BboyVal/" target="_blank" rel="noopener noreferrer" onClick={handleNavLinkClick}><FontAwesomeIcon icon={faLinkedin} /></a></li>
+                    <li><a href="https://github.com/Sc0rpi0V/React" target="_blank" rel="noopener noreferrer" onClick={handleNavLinkClick}><FontAwesomeIcon icon={faGithub} /></a></li>
+                    <li><a href="https://www.tiktok.com/@sc0rpi0v" target="_blank" rel="noopener noreferrer" onClick={handleNavLinkClick}><FontAwesomeIcon icon={faTiktok} /></a></li>
+                    <li><a href="https://twitter.com/BouryValentin" target="_blank" rel="noopener noreferrer" onClick={handleNavLinkClick}><FontAwesomeIcon icon={faTwitter} /></a></li>
+                    <li><a href="https://www.linkedin.com/in/valentin-boury-b716a31b6/" target="_blank" rel="noopener noreferrer" onClick={handleNavLinkClick}><FontAwesomeIcon icon={faLinkedin} /></a></li>
                 </ul>
             </div>
             <div className="principal-nav">
                 <ul>
-                    <li><NavLink href="#home" className="link-navigation" >{t('home')}</NavLink></li>
-                    <li><NavLink href="#about" className="link-navigation" >{t('about')}</NavLink></li>
-                    <li><NavLink href="#travel" className="link-navigation" >{t('travel')}</NavLink></li>
-                    <li><NavLink href="#project" className="link-navigation" >{t('project')}</NavLink></li>
+                    <li><a href="#home" className="link-navigation" >{t('home')}</a></li>
+                    <li><a href="#about" className="link-navigation" >{t('about')}</a></li>
+                    <li><a href="/travel" className="link-navigation" >{t('travel')}</a></li>
+                    <li><a href="/about" className="link-navigation" >{t('project')}</a></li>
                 </ul>
             </div>
             <div className="nav-lang">
