@@ -23,6 +23,7 @@ import NotFound from "./views/NotFound";
 import GalleryBoat from "./views/Galleryfirst";
 import DescriptionAboutMe from "./views/DescriptionAboutMe";
 import ContactMeInfo from "./views/ContactMeinfo";
+import ViewWork from "./views/ViewWork";
 
 const Router = () => {
     return (
@@ -31,6 +32,7 @@ const Router = () => {
             <Route exact path="/login" element={<Login />} />
             <Route exact path="/descriptionaboutme" element={<DescriptionAboutMe />} />
             <Route exact path="/contactme" element={<ContactMeInfo />} />
+            <Route exact path="/viewwork" element={<ViewWork />} />
             <Route exact path="/register" element={<Register />} />
             <Route exact path="/about" element={<About />} />
             <Route exact path="/travel" element={<Travel />} />

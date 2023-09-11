@@ -10,12 +10,16 @@
 }
 
 .wrapper a {
-  color: #000; /* Couleur du texte (noir) */
+  color: #000; 
   text-decoration: none;
 }
 
 .wrapper a:hover {
-  color: #000; /* Couleur du texte au survol (noir) */
+  color: #000; 
+}
+
+.footer .text-footer {
+  color:#333;
 }
 
 

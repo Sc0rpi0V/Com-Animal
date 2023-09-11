@@ -11,7 +11,7 @@ const Description = () => {
                 <h4>Description</h4>
                 <div className="onfirst-descriptions">
                     <article>
-                        <a href="#"><img src={CoverOrehus} alt="cover orehus"></img></a>
+                        <a href="/descriptionaboutme#"><img src={CoverOrehus} alt="cover orehus"></img></a>
                         <h5>Qui suis-je ?</h5>
                         <p>
                             Passionné par le développement Backend, je fusionne la puissance de la technologie 
@@ -21,10 +21,10 @@ const Description = () => {
                             et des logiques serveur complexes. Je jongle avec Javascript, HTML et CSS pour donner 
                             vie à mes idées, en créant des sites Web fluides et esthétiquement plaisants.
                         </p>
-                        <a className="see-more" href="#propos">En savoir plus</a>
+                        <a className="see-more" href="/descriptionaboutme">En savoir plus</a>
                     </article>
                     <article>
-                        <a href="#"><img src={WorkHard} alt="cover hard work"></img></a>
+                        <a href="/viewwork"><img src={WorkHard} alt="cover hard work"></img></a>
                         <h5>Qui fais-je ?</h5>
                         <p>
                             Passionné par le développement Backend, je fusionne la puissance de la technologie 
@@ -34,7 +34,7 @@ const Description = () => {
                             et des logiques serveur complexes. Je jongle avec Javascript, HTML et CSS pour donner 
                             vie à mes idées, en créant des sites Web fluides et esthétiquement plaisants.
                         </p>
-                        <a className="see-more" href="#work">En savoir plus</a>
+                        <a className="see-more" href="/viewwork">En savoir plus</a>
                     </article>
                 </div>
             <div className="onfirst-line"></div>
