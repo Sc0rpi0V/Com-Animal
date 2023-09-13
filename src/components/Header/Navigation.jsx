@@ -65,10 +65,11 @@ const Navigation = () => {
             </div>
             <div className="principal-nav">
                 <ul>
-                    <li><a href="#home" className="link-navigation" >{t('home')}</a></li>
-                    <li><a href="#about" className="link-navigation" >{t('about')}</a></li>
+                    <li><a href="/" className="link-navigation" >{t('home')}</a></li>
+                    <li><a href="/descriptionaboutme" className="link-navigation" >{t('about')}</a></li>
                     <li><a href="/travel" className="link-navigation" >{t('travel')}</a></li>
-                    <li><a href="/about" className="link-navigation" >{t('project')}</a></li>
+                    <li><a href="/viewproject" className="link-navigation" >{t('project')}</a></li>
+                    <li><a href="/about" className="link-navigation" >Ancienne page</a></li>
                 </ul>
             </div>
             <div className="nav-lang">

@@ -24,6 +24,13 @@ import GalleryBoat from "./views/Galleryfirst";
 import DescriptionAboutMe from "./views/DescriptionAboutMe";
 import ContactMeInfo from "./views/ContactMeinfo";
 import ViewWork from "./views/ViewWork";
+import ViewPortfolio from "./views/ViewProject";
+import IFS from "./components/Portfolio/CardPortfolio/Ifs";
+import CALFMVP from "./components/Portfolio/CardPortfolio/CalfMvp";
+import EDFENR from "./components/Portfolio/CardPortfolio/EdfEnr";
+import ENGIE from "./components/Portfolio/CardPortfolio/Engie";
+import WORDPRESS from "./components/Portfolio/CardPortfolio/Wordpress";
+import CALFV1 from "./components/Portfolio/CardPortfolio/CalfV1";
 
 const Router = () => {
     return (
@@ -33,6 +40,13 @@ const Router = () => {
             <Route exact path="/descriptionaboutme" element={<DescriptionAboutMe />} />
             <Route exact path="/contactme" element={<ContactMeInfo />} />
             <Route exact path="/viewwork" element={<ViewWork />} />
+            <Route exact path="/viewproject" element={<ViewPortfolio />} />
+            <Route exact path="/cardifs" element={<IFS />} />
+            <Route exact path="/cardcalfmvp" element={<CALFMVP />} />
+            <Route exact path="/cardcalfv1" element={<CALFV1 />} />
+            <Route exact path="/cardedfenr" element={<EDFENR />} />
+            <Route exact path="/cardengie" element={<ENGIE />} />
+            <Route exact path="/cardwordpress" element={<WORDPRESS />} />
             <Route exact path="/register" element={<Register />} />
             <Route exact path="/about" element={<About />} />
             <Route exact path="/travel" element={<Travel />} />
