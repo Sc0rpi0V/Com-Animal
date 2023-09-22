@@ -11,19 +11,19 @@ const Choice = () => {
         <section className="choice">
             <div className="card-choice">
                 <img src={About} alt="About"></img>
-                <a href="#" target="_blank">A propos de moi</a>
+                <a href="/descriptionaboutme">A propos de moi</a>
             </div>
             <div className="card-choice">
                 <img src={Chat} alt="Chat"></img>
-                <a href="#" target="_blank">Contactez moi</a>
+                <a href="/contactme">Contactez moi</a>
             </div>
             <div className="card-choice">
                 <img src={Codes} alt="Codes"></img>
-                <a href="https://github.com/Sc0rpi0V/React" target="_blank">Voir mon Code</a>
+                <a href="https://github.com/Sc0rpi0V/React" target="_blank" rel="noopener noreferrer">Voir mon Code</a>
             </div>
             <div className="card-choice">
                 <img src={Mobile} alt="Portfolio"></img>
-                <a href="#" target="_blank">Voir mon Portfolio</a>
+                <a href="/projectlist">Voir mon Portfolio</a>
             </div>
         </section>
     );

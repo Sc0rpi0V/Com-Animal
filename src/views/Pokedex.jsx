@@ -1,5 +1,6 @@
 import React from 'react';
 import DispPokedex from '../components/Pokedex/DispPokedex';
+import "./style/Pokedex.css";
 
 const Pokedex = () => {
   return (

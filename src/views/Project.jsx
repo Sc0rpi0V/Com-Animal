@@ -1,8 +1,8 @@
 import { useState } from "react";
 import CustomButton from "../components/Boutons/CustomButton";
-import DispGallery from "../components/DispGallery/DispGallery";
 import Animation from "../components/Animation/Animation";
 import "./style/Settings.css";
+import ListProjects from "../components/ListProjects/ListProjects";
 
 const Project = () => {
     const [textButton, setTextButton] = useState("");
@@ -24,7 +24,7 @@ const Project = () => {
                 />
                 <input type="text" onChange={handleChange} />
             </div>
-            <DispGallery />
+            <ListProjects />
             <Animation />
         </div>
     );

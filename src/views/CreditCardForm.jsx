@@ -1,12 +1,12 @@
 import React from 'react';
 import { Form, Field } from 'react-final-form';
-import Styles from '../components/Paiement/Styles';
-import Card from '../components/Paiement/Card';
+import Styles from '../components/CardPaiment/Styles';
+import Card from '../components/CardPaiment/Card';
 import {
   formatNumCarte,
   formatCVC,
   formatDateExp
-} from '../components/Paiement/cardUtils'
+} from '../components/CardPaiment/cardUtils'
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 

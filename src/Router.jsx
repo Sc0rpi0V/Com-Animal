@@ -7,15 +7,15 @@ import Login from "./views/Login";
 import Register from "./views/Register";
 import About from "./views/About";
 import Travel from "./views/Travel";
+import ProjectList from "./views/ProjectList";
 import DashBoard from "./views/Dashboard";
 import UserManagement from "./views/UserManagement";
 import CreditCardForm from "./views/CreditCardForm";
 import Home from "./views/Home";
 import Project from "./views/Project";
-//import Paiement from "./views/Paiement";
 import Countries from "./views/Countries";
 import Settings from "./views/Settings";
-//import Pokedex from "./views/Pokedex";
+import Pokedex from "./views/Pokedex";
 // import Contact from "./views/Contact";
 import Registration from "./views/Registration";
 import Users from "./views/Users";
@@ -31,6 +31,10 @@ import EDFENR from "./components/Portfolio/CardPortfolio/EdfEnr";
 import ENGIE from "./components/Portfolio/CardPortfolio/Engie";
 import WORDPRESS from "./components/Portfolio/CardPortfolio/Wordpress";
 import CALFV1 from "./components/Portfolio/CardPortfolio/CalfV1";
+import VisaCreditCard from "./components/ListProjects/Projects/PaiementCard";
+import Carousel from "./components/Carousel/Carousel";
+import ToDoList from "./components/ToDoList/ToDoList";
+
 
 const Router = () => {
     return (
@@ -50,13 +54,16 @@ const Router = () => {
             <Route exact path="/register" element={<Register />} />
             <Route exact path="/about" element={<About />} />
             <Route exact path="/travel" element={<Travel />} />
+            <Route exact path="/project" element={<Project />} />
+            <Route exact path="/projectlist" element={<ProjectList />} />
+            <Route exact path="/visacreditcard" element={<VisaCreditCard />} />
+            <Route exact path="/carousel" element={<Carousel />} />
+            <Route exact path="/todolist" element={<ToDoList />} />
             <Route exact path="/dashboard" element={<DashBoard />} />
             <Route path="/dashboard/users" element={<UserManagement />} />
             <Route path="/dashboard/payments" element={<CreditCardForm />} />
-            <Route exact path="/project" element={<Project />} />
-            {/* <Route exact path="/paiement" element={<Paiement />} /> */}
-            {/* <Route exact path="/pokedex" element={<Pokedex />} /> */}
             <Route exact path="/countries" element={<Countries />} />
+            <Route exact path="/pokedex" element={<Pokedex />} />
             <Route exact path="/settings" element={<Settings />} />
             {/* <Route exact path="/contact" element={<Contact />} /> */}
             <Route exact path="/users" element={<Users />} />

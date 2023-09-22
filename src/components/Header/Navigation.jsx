@@ -73,7 +73,7 @@ const Navigation = () => {
                 </ul>
             </div>
             <div className="nav-lang">
-                <select onChange={handleLangChange} defaultValue="fr">
+                <select className="lang" onChange={handleLangChange} defaultValue="fr">
                     <option value="fr">FR</option>
                     <option value="en">EN</option>
                 </select>

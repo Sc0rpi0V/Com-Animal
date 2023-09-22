@@ -8,7 +8,7 @@ const DispCountries = () => {
   const [data, setData] = useState([]);  
   const [rangeValue, setRangeValue] = useState(36);
   const [selectedRadio, setSelectedRadio] = useState("");
-  const radios = ["Afrique", "Amerique", "Asie", "Europe", "Oceanie"];
+  const radios = ["Africa", "Americas", "Asia", "Europe", "Oceania"];
 
   // useEffect jouer lorsque composant est monté
   useEffect(() => {
@@ -26,12 +26,12 @@ const DispCountries = () => {
           onChange={(e) => setRangeValue(e.target.value)}
         />
         {radios.map((continent) => (
-          <li>
+          <li key={continent}>
             <input
               type="radio"
               id={continent}
               name="RadioContentContinent"
-              checked={continent === selectedRadio}
+              checked={continent.toLowerCase() === selectedRadio.toLowerCase()}
               onChange={(e) => setSelectedRadio(e.target.id)}
             />
             <label htmlFor={continent}>{continent}</label>
