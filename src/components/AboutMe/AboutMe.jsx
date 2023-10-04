@@ -41,6 +41,7 @@ const AboutMe = () => {
                 <h4 className="technology">
                     {t('technology')}
                 </h4>
+                {/* eslint-disable jsx-a11y/anchor-is-valid */}
                 <div className="button-list">
                     <a href="#" className="home-btn home-btn1">SQL</a>
                     <a href="#" className="home-btn home-btn2">AS400</a>

@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import TaskList from './TaskList';
 import './style/Task.css';
+import { useTranslation } from "react-i18next";
 
 const ToDoList = () => {
+
+  const { t } = useTranslation();
+
   const [tasks, setTasks] = useState([]);
   const [inputText, setInputText] = useState('');
 
@@ -30,7 +34,7 @@ const ToDoList = () => {
         value={inputText}
         onChange={(e) => setInputText(e.target.value)}
       />
-      <button onClick={addTask}>Ajouter</button>
+      <button onClick={addTask}>{t('add')}</button>
       <TaskList tasks={tasks} onDelete={deleteTask} />
     </div>
   );

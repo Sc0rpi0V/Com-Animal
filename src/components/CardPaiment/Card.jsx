@@ -286,8 +286,10 @@ const Container = styled.div`
   }
 `
 
-export default props => (
+const CardComponent = props => (
   <Container>
     {/* <Cards {...props} /> */}
   </Container>
-)
+);
+
+export default CardComponent;

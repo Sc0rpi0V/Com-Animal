@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./style/Login.css";
 
 const Register = () => {
-    const [isLoginFormVisible, setIsLoginFormVisible] = useState(true);
+    const [setIsLoginFormVisible] = useState(true);
 
     const toggleForm = (event) => {
         event.preventDefault();
@@ -22,6 +22,7 @@ const Register = () => {
                         <button type="submit">create</button>
                         <p className="message">
                             Already registered?{" "}
+                            {/* eslint-disable jsx-a11y/anchor-is-valid */}
                             <a href="#" onClick={toggleForm}>
                                 Sign In
                             </a>

@@ -6,7 +6,7 @@ const Settings = () => {
     localStorage.getItem('cacheCleared') === 'true'
   );
 
-  const [isCheckedA, setIsCheckedA] = useState(false);
+  const [isCheckedA] = useState(false);
   const [isCheckedB, setIsCheckedB] = useState(false);
 
   const handleSubmit = (event) => {

@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faLinkedin, faFacebookF, faTwitter, faTiktok, faGithub} from "@fortawesome/free-brands-svg-icons";
+  faLinkedin, faGithub} from "@fortawesome/free-brands-svg-icons";
 // eslint-disable-next-line
 import i18next from '../../i18n';
 
@@ -56,11 +56,10 @@ const Navigation = () => {
             </NavLink>
             <div className="social-nav">
                 <ul>
-                    <li><a href="https://www.facebook.com/BboyVal/" target="_blank" rel="noopener noreferrer" onClick={handleNavLinkClick}><FontAwesomeIcon icon={faFacebookF} /></a></li>
-                    <li><a href="https://github.com/Sc0rpi0V/React" target="_blank" rel="noopener noreferrer" onClick={handleNavLinkClick}><FontAwesomeIcon icon={faGithub} /></a></li>
-                    <li><a href="https://www.tiktok.com/@sc0rpi0v" target="_blank" rel="noopener noreferrer" onClick={handleNavLinkClick}><FontAwesomeIcon icon={faTiktok} /></a></li>
-                    <li><a href="https://twitter.com/BouryValentin" target="_blank" rel="noopener noreferrer" onClick={handleNavLinkClick}><FontAwesomeIcon icon={faTwitter} /></a></li>
-                    <li><a href="https://www.linkedin.com/in/valentin-boury-b716a31b6/" target="_blank" rel="noopener noreferrer" onClick={handleNavLinkClick}><FontAwesomeIcon icon={faLinkedin} /></a></li>
+                    <li><a href="https://github.com/Sc0rpi0V/React" target="_blank" rel="noopener noreferrer" onClick={handleNavLinkClick}><FontAwesomeIcon title="React" icon={faGithub} /></a></li>
+                    <li><a href="https://github.com/Sc0rpi0V/local-wordpress" target="_blank" rel="noopener noreferrer" onClick={handleNavLinkClick}><FontAwesomeIcon title="Wordpress" icon={faGithub} /></a></li>
+                    <li><a href="https://github.com/Sc0rpi0V/Symfony-Local" target="_blank" rel="noopener noreferrer" onClick={handleNavLinkClick}><FontAwesomeIcon title="Symfony" icon={faGithub} /></a></li>
+                    <li><a href="https://www.linkedin.com/in/valentin-boury-b716a31b6/" target="_blank" rel="noopener noreferrer" onClick={handleNavLinkClick}><FontAwesomeIcon title="Linkedin" icon={faLinkedin} /></a></li>
                 </ul>
             </div>
             <div className="principal-nav">

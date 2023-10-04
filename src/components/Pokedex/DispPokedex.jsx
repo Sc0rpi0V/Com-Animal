@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './style/CardPokedex.css';
+import { useTranslation } from "react-i18next";
 
 const DispPokedex = () => {
+
+  const { t } = useTranslation();
+
   const [pokemonName, setPokemonName] = useState('');
   const [pokemonChosen, setPokemonChosen] = useState(false);
   const [pokemon, setPokemon] = useState({
@@ -55,27 +59,27 @@ const DispPokedex = () => {
   return (
     <div className="Content">
       <div className="TitleSection">
-        <h1>Pokedex</h1>
+        <h1>{t('pokedex')}</h1>
         <input
           type="text"
           onChange={(event) => {
             setPokemonName(event.target.value);
           }}
         />
-        <button onClick={searchPokemon}>Search Pokemon</button>
+        <button onClick={searchPokemon}>{t('searchPokemon')}</button>
       </div>
       <div className="DisplaySection">
         {!pokemonChosen ? (
-          <h1>Veuillez sélectionner un Pokemon</h1>
+          <h1>{t('titleSearchPokemon')}</h1>
         ) : (
           <>
             <h1>{pokemon.name}</h1>
             <img src={pokemon.img} alt={pokemon.name} />
-            <h3>Species: {pokemon.species}</h3>
-            <h3>Type: {pokemon.type}</h3>
-            <h4>Hp: {pokemon.hp}</h4>
-            <h4>Attack: {pokemon.attack}</h4>
-            <h4>Defense: {pokemon.defense}</h4>
+            <h3>{t('speciesPokemon')}: {pokemon.species}</h3>
+            <h3>{t('typePokemon')}: {pokemon.type}</h3>
+            <h4>{t('healthPokemon')}: {pokemon.hp}</h4>
+            <h4>{t('attackPower')}: {pokemon.attack}</h4>
+            <h4>{t('defensePower')}: {pokemon.defense}</h4>
           </>
         )}
       </div>

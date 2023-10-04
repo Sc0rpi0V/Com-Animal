@@ -34,6 +34,10 @@ import CALFV1 from "./components/Portfolio/CardPortfolio/CalfV1";
 import VisaCreditCard from "./components/ListProjects/Projects/PaiementCard";
 import Carousel from "./components/Carousel/Carousel";
 import ToDoList from "./components/ToDoList/ToDoList";
+import DisplayCardRecette from "./views/DisplayCardRecette";
+import DispSignUp from "./views/DispSignUp";
+import LogIn from "./components/SignUp/LogIn";
+import SignUp from "./components/SignUp/SignUp";
 
 
 const Router = () => {
@@ -41,6 +45,9 @@ const Router = () => {
         <Routes>
             <Route exact path="/" element={<Home />} />
             <Route exact path="/login" element={<Login />} />
+            <Route exact path="/signup" element={<DispSignUp />} />
+            <Route exact path="/auth" element={<LogIn />} />
+            <Route exact path="/authconfirm" element={<SignUp />} />
             <Route exact path="/descriptionaboutme" element={<DescriptionAboutMe />} />
             <Route exact path="/contactme" element={<ContactMeInfo />} />
             <Route exact path="/viewwork" element={<ViewWork />} />
@@ -64,6 +71,7 @@ const Router = () => {
             <Route path="/dashboard/payments" element={<CreditCardForm />} />
             <Route exact path="/countries" element={<Countries />} />
             <Route exact path="/pokedex" element={<Pokedex />} />
+            <Route exact path="/displaycardrecette" element={<DisplayCardRecette />} />
             <Route exact path="/settings" element={<Settings />} />
             {/* <Route exact path="/contact" element={<Contact />} /> */}
             <Route exact path="/users" element={<Users />} />
