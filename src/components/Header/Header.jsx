@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <header id="home" className="header-home">
       <h1>{t('headerDev')}<span>{t('headerProject')}</span></h1>
-      <h2>Valentin BOURY</h2>
+      <h2>Devröede Valentine</h2>
       <hr />
       <p>{t('headerDevBack')}</p>
       <div className="home-btns">
