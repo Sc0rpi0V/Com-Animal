@@ -1,3 +1,4 @@
+/* Styles de base pour tous les écrans */
 *, ::before, ::after {
     box-sizing: border-box;
     margin: 0;
@@ -16,7 +17,7 @@ p, span, a {
     font-weight: bold;
 }
 
-h1,h2 {
+h1, h2 {
     font-family: "Secular One", sans-serif;
 }
 
@@ -31,10 +32,7 @@ a:hover {
     color: #ffa600;
 }
 
-p {
-    font-size: calc(13px + 0.2vw)
-}
-
+/* Styles pour header-home */
 .header-home {
     width: 100%;
     height: 100vh;
@@ -42,55 +40,54 @@ p {
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-    padding-top: 80px;
-    background: no-repeat center / cover url(../src/fond.jpg);
-    /* -wmso-background-attachment: fixed; */
+    padding-top: 4em;
+    background: no-repeat center / cover url(../src/fond.webp);
     background-attachment: fixed;
     padding-left: 1rem;
 }
 
 .header-home h1 {
     color: #f1f1f1;
-    font-size: calc(30px + 2.3vw);
-    margin-bottom: 1rem;
+    font-size: calc(1.5em + 2vw);
+    margin-bottom: 1em;
 }
 
 .header-home h1 span {
     color: #ffa600;
     font-family: 'Dancing Script', cursive;
-    font-size: calc(30px + 5.3vw);
+    font-size: calc(1.5em + 5vw);
 }
 
 .header-home h2 {
     color: #f1f1f1;
-    margin-bottom: 1rem;
-    font-size: calc(20px + 1.3vw);
+    margin-bottom: 1em;
+    font-size: calc(1em + 0.6vw);
 }
 
 .header-home hr {
     border: none;
-    width: 250px;
-    height: 2px;
+    width: 2.5em;
+    height: 0.125em;
     background: #ffa600;
-    margin-bottom: 1rem;
+    margin-bottom: 1em;
 }
 
 .header-home p {
-    font-size: 30px;
-    margin-bottom: 1rem;
+    font-size: calc(0.8125em + 0.325vw);
+    margin-bottom: 1em;
     color: #f1f1f1;
-    font-size: calc(13px + 1.3vw);
 }
 
+/* Styles pour les boutons */
 .home-btns {
     height: auto;
-    margin: 2rem 0;
+    margin: 2em 0;
 }
 
 .home-btn {
-    border: 1px solid #ffa600;
-    padding: 1rem 2rem;
-    border-radius: 5px;
+    border: 0.0625em solid #ffa600;
+    padding: 1em 2em;
+    border-radius: 0.3125em;
     color: #f1f1f1;
 }
 
@@ -99,29 +96,28 @@ p {
 }
 
 .home-btn2 {
-    border: 1px solid #ffa600;
+    border: 0.0625em solid #ffa600;
     background: #ffa600;
-    box-shadow: 0 0 0 0 rgb(173,226,226,0.4);
-        transition: box-shadow 0.2s ease-in;
-    margin-right: 1rem;
+    box-shadow: 0 0 0 0 rgba(173, 226, 226, 0.4);
+    transition: box-shadow 0.2s ease-in;
+    margin-right: 1em;
 }
 
 .home-btn2:hover {
-    box-shadow: 0 0 10px 7px rgb(173, 226, 226, 0.4);
+    box-shadow: 0 0 0.625em 0.4375em rgba(173, 226, 226, 0.4);
 }
 
 .home-btn1 {
-    box-shadow: 0 0 0 0 rgb(173, 226, 226, 0.4);
-    transition: box-shadow 0.2s ease-in,
-    background 0.2s ease-in;
-    margin-right: 1rem;
+    box-shadow: 0 0 0 0 rgba(173, 226, 226, 0.4);
+    transition: box-shadow 0.2s ease-in, background 0.2s ease-in;
+    margin-right: 1em;
 }
 
 .home-btn1:hover {
     background: #ffa600;
-    box-shadow: 0 0 10px 7px rgb(173, 226, 226, 0.4);
+    box-shadow: 0 0 0.625em 0.4375em rgba(173, 226, 226, 0.4);
 }
-/* 
+
 .home-btn3 {
     box-shadow: 0 0 0 0 rgb(173, 226, 226, 0.4);
     transition: box-shadow 0.2s ease-in,
@@ -134,34 +130,58 @@ p {
     box-shadow: 0 0 10px 7px rgb(173, 226, 226, 0.4);
 }
 
-.home-btn4 {
-    border: 1px solid #ffa600;
-    background: #ffa600;
-    box-shadow: 0 0 0 0 rgb(173,226,226,0.4);
-        transition: box-shadow 0.2s ease-in;
+
+/* Styles pour les écrans de taille moyenne (tablette) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .header-home h1 {
+        font-size: calc(1.25em + 2.5vw);
+    }
+
+    .header-home h1 span {
+        font-size: calc(1.25em + 6vw);
+    }
+
+    .header-home h2 {
+        font-size: calc(1em + 1vw);
+    }
+
+    .header-home hr {
+        width: 1.5em;
+    }
+
+    .header-home p {
+        font-size: calc(0.8125em + 0.5vw);
+    }
+
+    .home-btn {
+        padding: 0.75em 1.5em;
+    }
 }
 
-.home-btn4:hover {
-    box-shadow: 0 0 10px 7px rgb(173, 226, 226, 0.4);
-} */
+/* Styles pour les écrans plus petits (mobiles) */
+@media screen and (max-width: 767px) {
+    .header-home h1 {
+        font-size: calc(1.125em + 3.5vw);
+    }
 
-@media screen and (min-width: 780px) and (max-width: 1200px) {
+    .header-home h1 span {
+        font-size: calc(1.125em + 7vw);
+    }
+
+    .header-home h2 {
+        font-size: calc(1em + 2vw);
+    }
+
+    .header-home hr {
+        width: 1em;
+    }
+
+    .header-home p {
+        font-size: calc(0.8125em + 1.5vw);
+    }
+
     .home-btn {
-        padding: 0.8rem 1rem;
-    }
-}
-@media screen and (max-width: 780px) {
-    .home-btn {
-        padding: 0.5rem 0.8rem;
-    }
-    .header-home {
-        align-items:center;
-        padding-left: 0;
-        text-align: center;
-    }
-    .home-btns {
-        display: flex;
-        justify-content: center;
-        font-size: 13px;
+        padding: 0.5em 1em;
+        margin: 0.5em 0;
     }
 }

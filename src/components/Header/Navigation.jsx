@@ -4,8 +4,7 @@ import logo from "../../img/logo.jpeg";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faLinkedin, faGithub} from "@fortawesome/free-brands-svg-icons";
+import { faGithub} from "@fortawesome/free-brands-svg-icons";
 // eslint-disable-next-line
 import i18next from '../../i18n';
 
@@ -58,8 +57,6 @@ const Navigation = () => {
                 <ul>
                     <li><a href="https://github.com/Sc0rpi0V/React" target="_blank" rel="noopener noreferrer" onClick={handleNavLinkClick}><FontAwesomeIcon title="React" icon={faGithub} /></a></li>
                     <li><a href="https://github.com/Sc0rpi0V/local-wordpress" target="_blank" rel="noopener noreferrer" onClick={handleNavLinkClick}><FontAwesomeIcon title="Wordpress" icon={faGithub} /></a></li>
-                    <li><a href="https://github.com/Sc0rpi0V/Symfony-Local" target="_blank" rel="noopener noreferrer" onClick={handleNavLinkClick}><FontAwesomeIcon title="Symfony" icon={faGithub} /></a></li>
-                    <li><a href="https://www.linkedin.com/in/valentin-boury-b716a31b6/" target="_blank" rel="noopener noreferrer" onClick={handleNavLinkClick}><FontAwesomeIcon title="Linkedin" icon={faLinkedin} /></a></li>
                 </ul>
             </div>
             <div className="principal-nav">
@@ -67,7 +64,7 @@ const Navigation = () => {
                     <li><a href="/" className="link-navigation" >{t('home')}</a></li>
                     <li><a href="/descriptionaboutme" className="link-navigation" >{t('about')}</a></li>
                     <li><a href="/travel" className="link-navigation" >{t('travel')}</a></li>
-                    <li><a href="/viewproject" className="link-navigation" >{t('project')}</a></li>
+                    <li><a href="/about" className="link-navigation" >Communication Animale</a></li>
                     <li><a href="/about" className="link-navigation" >Ancienne page</a></li>
                 </ul>
             </div>

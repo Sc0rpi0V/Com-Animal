@@ -8,14 +8,14 @@ const Header = () => {
 
   return (
     <header id="home" className="header-home">
-      <h1>{t('headerDev')}<span>{t('headerProject')}</span></h1>
+      <h1>{t('headerWelcomeProject')}<span>{t('headerProject')}</span></h1>
       <h2>Devröede Valentine</h2>
       <hr />
-      <p>{t('headerDevBack')}</p>
+      <p>{t('headerAnimCom')}</p>
       <div className="home-btns">
         <a href="/descriptionaboutme" className="home-btn home-btn1" rel="noopener noreferrer">{t('aboutMe')}</a>
         <a href="/contactme" className="home-btn home-btn2" rel="noopener noreferrer">{t('contactMe')}</a>
-        <a href="/showecommerce" className="home-btn home-btn1" rel="noopener noreferrer">{t('training')}</a>
+        <a href="/showecommerce" className="home-btn home-btn3" rel="noopener noreferrer">{t('training')}</a>
       </div>
     </header>
   );
