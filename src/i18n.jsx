@@ -119,6 +119,7 @@ i18next.use(initReactI18next).init({
         secondPartPhpReact: 'Ces développeurs sont des maîtres dans l\'art de l\'interaction utilisateur. Ils utilisent ReactJS pour créer des composants interactifs et dynamiques qui s\'intègrent parfaitement à WordPress. Cela signifie qu\'ils peuvent faire en sorte que l\'édition de contenu sur WordPress soit plus fluide, plus visuelle et plus intuitive.',
         thirdPartPhpReact: 'Ils sont également des magiciens de la personnalisation. Ils prennent les éléments de base de WordPress et les transforment en expériences uniques et sur mesure. Cela peut inclure la création de blocs personnalisés pour Gutenberg, l\'optimisation des performances, et l\'assurance que tout fonctionne parfaitement ensemble.',
         fourthPartPhpReact: 'En fin de compte, le métier de développeur PHP/ReactJS pour WordPress Gutenberg consiste à repousser les limites de ce qui est possible avec WordPress. Ils combinent la puissance des technologies modernes avec la simplicité de WordPress pour créer des sites Web qui se démarquent et offrent une expérience utilisateur exceptionnelle. C\'est comme être à la fois l\'architecte et le chef d\'orchestre d\'une symphonie web.',
+        training: 'Mes Formations',
       }  
     } ,
     en: { 
@@ -229,6 +230,7 @@ i18next.use(initReactI18next).init({
         thirdPartDevWordpress: 'Additionally, WordPress developers are expert problem solvers. Like craftsmen, they refine the details technical, ensure that the site runs smoothly and ensure that everything is up to date and secure, a bit like a Shop owner makes sure everything is in order.',
         fourthPartDevWordpress: 'Ultimately, the job of a WordPress developer is about turning ideas into reality online, creating spaces virtual spaces where creativity can flourish and visitors feel at home. It is a profession that combines technology and the art of creating memorable and functional websites.',
         devPHP: 'PHP Developper',
+        training: 'My Lessons',
       }
     }
   } ,

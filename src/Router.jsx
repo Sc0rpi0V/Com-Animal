@@ -38,6 +38,10 @@ import DisplayCardRecette from "./views/DisplayCardRecette";
 import DispSignUp from "./views/DispSignUp";
 import LogIn from "./components/SignUp/LogIn";
 import SignUp from "./components/SignUp/SignUp";
+import ShowEcommerce from "./views/ShowEcommerce";
+import Panier from "./components/Ecommerce/Panier";
+import FormationHtml from "./components/Formation/FormationHtml";
+import FormationCSS from "./components/Formation/FormationCss";
 
 
 const Router = () => {
@@ -66,6 +70,10 @@ const Router = () => {
             <Route exact path="/visacreditcard" element={<VisaCreditCard />} />
             <Route exact path="/carousel" element={<Carousel />} />
             <Route exact path="/todolist" element={<ToDoList />} />
+            <Route exact path="/showecommerce" element={<ShowEcommerce />} />
+            <Route exact path="/panier" element={<Panier />} />
+            <Route exact path="/formationhtml" element={<FormationHtml />} />
+            <Route exact path="/formationcss" element={<FormationCSS />} />
             <Route exact path="/dashboard" element={<DashBoard />} />
             <Route path="/dashboard/users" element={<UserManagement />} />
             <Route path="/dashboard/payments" element={<CreditCardForm />} />
