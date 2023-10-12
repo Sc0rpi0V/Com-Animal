@@ -1,18 +1,35 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { auth, firestore } from '../../firebase';
-import { signInWithEmailAndPassword } from 'firebase/auth';
+import { signInWithEmailAndPassword, onAuthStateChanged, setPersistence, browserSessionPersistence } from 'firebase/auth';
 import { query, where, getDocs, collection } from 'firebase/firestore';
 import './style/LogIn.css';
+import { useAuth } from '../../AuthContext';
+import { useNavigate } from 'react-router-dom';
 
 const LogIn = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+  const { login, logout } = useAuth();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        // L'utilisateur est connecté
+        login(user);
+      } else {
+        // L'utilisateur n'est pas connecté
+        logout();
+      }
+    });
+
+    return () => unsubscribe();
+  }, [login, logout]);
 
   const handleLogin = async () => {
     try {
-      // Vérifiez si l'utilisateur avec cet email existe
       const usersRef = query(
         collection(firestore, 'Users'),
         where('mailAddress', '==', email)
@@ -22,12 +39,14 @@ const LogIn = () => {
       if (!userSnapshot.empty) {
         const userData = userSnapshot.docs[0].data();
         
-        // Comparez le nom récupéré avec le nom fourni
-        if (userData.firstName === name) {
+        if (userData.lastName === name) {
+          await setPersistence(auth, browserSessionPersistence);
           const userCredential = await signInWithEmailAndPassword(auth, email, password);
           console.log('Connecté avec succès!', userCredential.user);
-          
-          // Réinitialisez les champs après la connexion réussie
+
+          login(userData);
+          navigate('/account');
+
           setEmail('');
           setPassword('');
           setName('');
@@ -36,7 +55,6 @@ const LogIn = () => {
         }
       }
 
-      // Si les noms ne correspondent pas, affichez une erreur
       setErrorMessage('Les informations de connexion sont incorrectes.');
     } catch (error) {
       console.error('Erreur lors de la connexion:', error);

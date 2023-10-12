@@ -4,6 +4,7 @@ import TheHeader from './components/Header/TheHeader';
 import Router from './Router';
 
 const App = () => {
+
   return (
     <div className="app">
       <TheHeader />

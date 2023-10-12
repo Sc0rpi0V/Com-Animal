@@ -3,7 +3,6 @@
 // Copy and paste the following code into the file:
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Login from "./views/Login";
 import Register from "./views/Register";
 import About from "./views/About";
 import CreditCardForm from "./views/CreditCardForm";
@@ -11,10 +10,15 @@ import Home from "./views/Home";
 import Settings from "./views/Settings";
 import NotFound from "./views/NotFound";
 import DescriptionAboutMe from "./views/DescriptionAboutMe";
+import DescriptionAboutCom from "./views/DescriptionAboutCom";
+import Exercices from "./views/Exercice";
+import Anchoring from "./components/Preparation/step/Anchoring";
+import ViewWork from "./views/ViewWork";
 import ContactMeInfo from "./views/ContactMeinfo";
 import DispSignUp from "./views/DispSignUp";
 import LogIn from "./components/SignUp/LogIn";
 import SignUp from "./components/SignUp/SignUp";
+import DispAccount from "./views/DispAccount";
 import ShowEcommerce from "./views/ShowEcommerce";
 import Panier from "./components/Ecommerce/Panier";
 import FormationHtml from "./components/Formation/FormationHtml";
@@ -25,11 +29,15 @@ const Router = () => {
     return (
         <Routes>
             <Route exact path="/" element={<Home />} />
-            <Route exact path="/login" element={<Login />} />
             <Route exact path="/signup" element={<DispSignUp />} />
             <Route exact path="/auth" element={<LogIn />} />
             <Route exact path="/authconfirm" element={<SignUp />} />
+            <Route exact path="/account" element={<DispAccount />} />
             <Route exact path="/descriptionaboutme" element={<DescriptionAboutMe />} />
+            <Route exact path="/descriptionaboutcom" element={<DescriptionAboutCom />} />
+            <Route exact path="/exercice" element={<Exercices />} />
+            <Route exact path="/anchoring" element={<Anchoring />} />
+            <Route exact path="/viewwork" element={<ViewWork />} />
             <Route exact path="/contactme" element={<ContactMeInfo />} />
             <Route exact path="/register" element={<Register />} />
             <Route exact path="/about" element={<About />} />

@@ -5,11 +5,14 @@ import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub} from "@fortawesome/free-brands-svg-icons";
+import { useAuth } from "../../AuthContext";
+import Disconnect from '../Disconnect/Disconnect';
 // eslint-disable-next-line
 import i18next from '../../i18n';
 
 const Navigation = () => {
     const { t, i18n } = useTranslation();
+    const { user } = useAuth();
 
     function handleLangChange(event) {
         console.log(event.target.value);
@@ -47,7 +50,6 @@ const Navigation = () => {
         };
     }, []);
 
-
     return (
         <nav className={navActive ? "active" : ""}>
             <NavLink to="/">
@@ -63,9 +65,11 @@ const Navigation = () => {
                 <ul>
                     <li><a href="/" className="link-navigation" >{t('home')}</a></li>
                     <li><a href="/descriptionaboutme" className="link-navigation" >{t('about')}</a></li>
-                    <li><a href="/travel" className="link-navigation" >{t('travel')}</a></li>
+                    <li><a href="/exercice" className="link-navigation" >{t('exercice')}</a></li>
                     <li><a href="/about" className="link-navigation" >Communication Animale</a></li>
-                    <li><a href="/about" className="link-navigation" >Ancienne page</a></li>
+                    {user ? null : ( <li><a href="/auth" className="link-navigation" >Connexion</a></li>)}
+                    {user ? ( <li><a href="/account" className="link-navigation">Mon Compte</a></li> ) : null}
+                    {user ? ( <Disconnect /> ) : null}
                 </ul>
             </div>
             <div className="nav-lang">

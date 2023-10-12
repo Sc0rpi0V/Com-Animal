@@ -16,7 +16,7 @@ p, a {
     font-weight: bold;
 }
 
-h4,h5 {
+h4, h5 {
     font-family: "Secular One", sans-serif;
 }
 
@@ -48,7 +48,7 @@ a:hover {
 }
 
 p {
-    font-size: calc(13px + 0.2vw)
+    font-size: calc(13px + 0.2vw);
 }
 
 .onfirst {
@@ -101,9 +101,9 @@ p {
     max-width: 500px;
     height: auto;
     padding-bottom: 1rem;
-    box-shadow: 0 0 7px 4px rgba(8,66,73,0.6);
+    box-shadow: 0 0 7px 4px rgba(8, 66, 73, 0.6);
     transition: transform 0.2s ease-in;
-    background : #000;
+    background: #000;
     margin-top: 4rem;
 }
 
@@ -128,11 +128,35 @@ p {
 
 .onfirst article img {
     width: 100%;
-    height: auto;;
+    height: auto;
 }
 
 @media screen and (max-width: 1021px) {
     .onfirst::after, .onfirst::before {
-        display:none;
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h4 {
+        font-size: calc(10px + 4vw);
+        line-height: 50px;
+    }
+    
+    .onfirst article {
+        max-width: 90%;
+        margin-top: 2rem;
+    }
+    
+    .see-more {
+        font-size: calc(10px + 0.5vw);
+    }
+    
+    .onfirst article h5 {
+        font-size: calc(15px + 1.5vw);
+    }
+    
+    .onfirst article p {
+        font-size: calc(10px + 0.7vw);
     }
 }
