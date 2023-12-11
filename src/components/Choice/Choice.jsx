@@ -22,11 +22,11 @@ const Choice = () => {
             </div>
             <div className="card-choice">
                 <img src={Codes} alt="Codes"></img>
-                <a href="https://github.com/Sc0rpi0V" target="_blank" rel="noopener noreferrer">{t('seeMyCode')}</a>
+                <a href="/exercice">{t('seeMyExercices')}</a>
             </div>
             <div className="card-choice">
-                <img src={Mobile} alt="Portfolio"></img>
-                <a href="/projectlist">{t('portfolio')}</a>
+                <img src={Mobile} alt="Calendar"></img>
+                <a href="/projectlist">{t('calendar')}</a>
             </div>
         </section>
     );

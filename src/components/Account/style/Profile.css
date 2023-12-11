@@ -1,0 +1,32 @@
+.profile-container {
+    display: flex;
+}
+
+.profile-content {
+    padding: 20px;
+    background-color: grey;
+    width: 1250px;
+    height: auto;
+    margin-top: 120px;
+}
+
+.profile-title {
+    color: white;
+}
+
+.profile {
+    margin-top: 50px;
+    border-radius: 5px;
+    border: 3px solid black;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.profile-button {
+    padding: 8px 16px;
+    font-size: 14px;
+}

@@ -13,12 +13,20 @@ import DescriptionAboutMe from "./views/DescriptionAboutMe";
 import DescriptionAboutCom from "./views/DescriptionAboutCom";
 import Exercices from "./views/Exercice";
 import Anchoring from "./components/Preparation/step/Anchoring";
+import OpenHearth from "./components/Preparation/step/OpenHearth";
+import Relaxation from "./components/Preparation/step/Relaxation";
+import SpiritConnexion from "./components/Preparation/step/SpiritConnexion";
+import SensoryExchanges from "./components/Preparation/step/SensoryExchanges";
+import MyCalendar from "./components/Calendar/Calendar";
 import ViewWork from "./views/ViewWork";
 import ContactMeInfo from "./views/ContactMeinfo";
 import DispSignUp from "./views/DispSignUp";
 import LogIn from "./components/SignUp/LogIn";
 import SignUp from "./components/SignUp/SignUp";
 import DispAccount from "./views/DispAccount";
+import Profile from "./components/Account/MenuDashboard/Profile";
+import ResetPassword from "./components/Account/MenuDashboard/ResetPassword";
+import ChangeAddresss from "./components/Account/MenuDashboard/ChangeAddress";
 import ShowEcommerce from "./views/ShowEcommerce";
 import Panier from "./components/Ecommerce/Panier";
 import FormationHtml from "./components/Formation/FormationHtml";
@@ -33,10 +41,18 @@ const Router = () => {
             <Route exact path="/auth" element={<LogIn />} />
             <Route exact path="/authconfirm" element={<SignUp />} />
             <Route exact path="/account" element={<DispAccount />} />
+            <Route exact path="/profile" element={<Profile />} />
+            <Route exact path="/changepassword" element={<ResetPassword />} />
+            <Route exact path="/changeaddress" element={<ChangeAddresss />} />
             <Route exact path="/descriptionaboutme" element={<DescriptionAboutMe />} />
             <Route exact path="/descriptionaboutcom" element={<DescriptionAboutCom />} />
             <Route exact path="/exercice" element={<Exercices />} />
             <Route exact path="/anchoring" element={<Anchoring />} />
+            <Route exact path="/openhearth" element={<OpenHearth />} />
+            <Route exact path="/relaxation" element={<Relaxation />} />
+            <Route exact path="/spiritconnexion" element={<SpiritConnexion />} />
+            <Route exact path="/sensoryexchange" element={<SensoryExchanges />} />
+            <Route exact path="projectlist" element={<MyCalendar />} />
             <Route exact path="/viewwork" element={<ViewWork />} />
             <Route exact path="/contactme" element={<ContactMeInfo />} />
             <Route exact path="/register" element={<Register />} />

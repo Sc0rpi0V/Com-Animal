@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { collection, getDocs } from 'firebase/firestore';
+import { collection, getDocs, deleteDoc, doc } from 'firebase/firestore';
 import './style/Panier.css';
 import { db } from "../../firebase"; 
 
@@ -17,7 +17,7 @@ const Panier = () =>  {
 
             querySnapshot.forEach((doc) => {
                 const data = doc.data();
-                items.push(data);
+                items.push({ id: doc.id, ...data });
                 totalPrice += data.price;
             });
 
@@ -29,13 +29,31 @@ const Panier = () =>  {
     }, []);
 
     const handleItemSelection = (item) => {
+    console.log("Selected Item:", item);
+
         setSelectedItem(item);
     };
 
     const handlePurchase = () => {
-        // Logique pour achat
         console.log("Achat effectué :", selectedItem);
         // Envoie infos au back ou service paiement 
+    };
+
+    const handleRemoveItem = async (itemId) => {
+        try {
+            await deleteDoc(doc(db, 'cart', itemId));
+            console.log('Formation retirée du panier avec succès.');
+
+            // Mise à jour des éléments du panier après suppression
+            const updatedCartItems = cartItems.filter(item => item.id !== itemId);
+            setCartItems(updatedCartItems);
+
+            // Recalcul du total des prix après suppression
+            const updatedTotalPrice = updatedCartItems.reduce((sum, item) => sum + item.price, 0);
+            setTotalPrice(updatedTotalPrice);
+        } catch (error) {
+            console.error('Erreur lors de la suppression de la formation du panier : ', error);
+        }
     };
 
     return (
@@ -46,7 +64,10 @@ const Panier = () =>  {
                     <ul>
                         {cartItems.map((item, index) => (
                             <li key={index} onClick={() => handleItemSelection(item)}>
-                                {item.name} - ${item.price}
+                                <p>{item.name} - {item.duration}</p>
+                                <p>{item.description}</p>
+                                <p>{item.price} $</p>
+                                <button className="btn-delete-card" onClick={(e) => { e.stopPropagation(); handleRemoveItem(item.id); }}>Supprimer</button>
                             </li>
                         ))}
                     </ul>
@@ -57,7 +78,6 @@ const Panier = () =>  {
                             <h3>Informations de la formation</h3>
                             <p>Nom : {selectedItem.name}</p>
                             <p>Prix : ${selectedItem.price}</p>
-                            {/* Ajoutez ici d'autres détails de la formation si nécessaire */}
                             <button onClick={handlePurchase}>Acheter</button>
                         </div>
                     )}

@@ -8,7 +8,7 @@ import { addDoc, collection } from 'firebase/firestore';
 const Ecommerce = ({addToCart}) => {
     
     const [cartItems, setCartItems] = useState([]);
-    const [cardsData, setCardsData] = useState([
+    const [cardsData] = useState([
         {
             name: "Html",
             description: "Cours sur les bases HTML pour réaliser votre site",
@@ -96,6 +96,8 @@ const Ecommerce = ({addToCart}) => {
         try {
             await addDoc(collection(db, 'cart'), {
                 name: card.name,
+                description: card.description,
+                duration: card.duration,
                 price: card.price,
             });
             console.log('Article ajouté au panier avec succès.');
@@ -106,6 +108,7 @@ const Ecommerce = ({addToCart}) => {
 
     return (
         <>
+            <h4>Formations</h4>
             <a href="/panier" className="cart-container">
                 <FontAwesomeIcon icon={faShoppingCart} className="cart-icon" size="2x" />
                 <span className="cart-count">{cartCount}</span>

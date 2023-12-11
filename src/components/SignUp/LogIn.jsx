@@ -17,10 +17,8 @@ const LogIn = () => {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
-        // L'utilisateur est connecté
         login(user);
       } else {
-        // L'utilisateur n'est pas connecté
         logout();
       }
     });

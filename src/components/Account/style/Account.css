@@ -1,12 +1,44 @@
-.dashboard-title {
-    margin-top: 120px;
-    color: white;
-}
-
 .connect-user {
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: calc(13px + 0.2vw);
     color: #f1f1f1;
     padding: 0 1rem;
+}
+
+.account-container {
+    display: flex;
+}
+  
+.account-content {
+    padding: 20px;
+    background-color: grey;
+    width: 1250px;
+    height: auto;
+    margin-top: 120px;
+}
+
+.dashboard-title {
+    color: white;
+}
+
+.dashboard {
+    margin-top: 50px;
+}
+
+.tab-dashboard {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.connection-info, .recent-activity {
+    width: 48%;
+    background-color: white;
+    border: 5px solid black;
+    border-radius: 10px;
+}
+
+p {
+    color: black;
 }

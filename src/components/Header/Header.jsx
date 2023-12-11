@@ -8,7 +8,7 @@ const Header = () => {
 
   return (
     <header id="home" className="header-home">
-      <h1>{t('headerWelcomeProject')}<span>{t('headerProject')}</span></h1>
+      <h1>{t('headerProject')}<span>{t('headerTogether')}</span></h1>
       <h2>Devröede Valentine</h2>
       <hr />
       <p>{t('headerAnimCom')}</p>

@@ -2,7 +2,6 @@ import React from "react";
 import "./style/AboutMe.css";
 import ImgProfil from "./src/profil.jpg";
 import { useTranslation } from "react-i18next";
-import DownloadButton from "../Download/Download";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSlack, faWordpress, faReact , faSquareGit, faDocker} from "@fortawesome/free-brands-svg-icons";
 
@@ -33,25 +32,11 @@ const AboutMe = () => {
                     </div>
                     <div className="info-about">
                         <h2>{t('story')}</h2>
-                        <p>{t('passionateComputer')}</p>
-                        <p>{t('passionateComputer2')}</p>
-                        <p>{t('realisation')}</p>
+                        <p>{t('passionateCom')}</p>
+                        <p>{t('passionateCom2')}</p>
+                        <p>{t('passionateCom3')}</p>
+                        <p>{t('passionateCom4')}</p>
                     </div>
-                </div>
-                <h4 className="technology">
-                    {t('technology')}
-                </h4>
-                {/* eslint-disable jsx-a11y/anchor-is-valid */}
-                <div className="button-list">
-                    <a href="#" className="home-btn home-btn1">SQL</a>
-                    <a href="#" className="home-btn home-btn2">AS400</a>
-                    <a href="#" className="home-btn home-btn3">PHP</a>
-                    <a href="#" className="home-btn home-btn4">JAVA</a>
-                    <a href="#" className="home-btn home-btn5">JAVASCRIPT</a>
-                    <a href="#" className="home-btn home-btn6">HTML</a>
-                    <a href="#" className="home-btn home-btn7">PYTHON</a>
-                    <a href="#" className="home-btn home-btn8">CSS</a>
-                    <a href="#" className="home-btn home-btn9">React JS</a>
                 </div>
             </section>
             <section className="services">
@@ -77,7 +62,6 @@ const AboutMe = () => {
                         </div>
                     </div>
                 </div>
-                <DownloadButton />
             </section>
         </>
     );

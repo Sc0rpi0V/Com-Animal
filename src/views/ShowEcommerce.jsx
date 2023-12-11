@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Ecommerce from "../components/Ecommerce/Ecommerce";
-import Panier from "../components/Ecommerce/Panier";
 
 const ShowEcommerce = () => {
 
@@ -13,7 +12,6 @@ const ShowEcommerce = () => {
     return (
         <>
             <Ecommerce addToCart={addToCart} />
-            <Panier cartItems={cartItems} />
         </>
     );
 }

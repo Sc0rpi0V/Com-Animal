@@ -2,7 +2,7 @@
 .footer {
   background: #eee;
   padding: 2em 2.5em;
-  margin-top: 2.5em;
+  /* margin-top: 2.5em; */
   text-align: center;
 }
 
@@ -30,7 +30,7 @@
 
 .icon {
   position: relative;
-  background: #ffffff;
+  background: #fff;
   border-radius: 50%;
   padding: 0.9375em;
   margin: 0.625em;

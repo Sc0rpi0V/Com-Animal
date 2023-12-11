@@ -1,66 +1,88 @@
-import React, { useEffect } from "react";
-import './style/Account.css';
-import { auth } from '../../firebase';
-import { useAuth } from "../../AuthContext";
+import React, { useEffect, useState } from 'react';
+import { auth, firestore } from '../../firebase';
 import { onAuthStateChanged } from 'firebase/auth';
 import { doc, getDoc } from 'firebase/firestore';
-import { firestore } from '../../firebase';
+import './style/Account.css';
+import Menu from './MenuDashboard/Menu';
+import { useTranslation } from "react-i18next";
 
 const Account = () => {
-    const { user, login, logout } = useAuth(); 
+  const [user, setUser] = useState(null);
+  const [createdAt, setCreatedAt] = useState(null);
+  const [lastLogin, setLastLogin] = useState(null);
 
-    const fetchUserDataFromFirestore = async (uid) => {
-        const userDocRef = doc(firestore, 'Users', uid);
+  const { t } = useTranslation();
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, async (userAuth) => {
+
+      if (userAuth) {
+
+        const currentUser = auth.currentUser;
+        const userMetadata = currentUser.metadata;
+
+        // Date de création du compte
+        const userCreatedAt = userMetadata.creationTime;
+        setCreatedAt(userCreatedAt);
+
+        // Date de dernière connexion
+        const userLastLogin = userMetadata.lastSignInTime;
+        setLastLogin(userLastLogin);
+
+        const userDocRef = doc(firestore, 'Users', userAuth.uid);
+        console.log(userDocRef);
         try {
           const userDoc = await getDoc(userDocRef);
           if (userDoc.exists()) {
             const userData = userDoc.data();
-            console.log('Données de l\'utilisateur récupérées depuis Firestore :', userData);
-            return userData;
+            setUser(userData);
           } else {
             console.log('Le document de l\'utilisateur n\'existe pas dans Firestore.');
           }
         } catch (error) {
           console.error('Erreur lors de la récupération des données de l\'utilisateur depuis Firestore:', error);
         }
-        return null;
-      };    
+      } else {
+        setUser(null);
+      }
+    });
 
-    useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, async (authUser) => {
-            if (authUser) {
-                const userData = await fetchUserDataFromFirestore(authUser.uid);
-                // L'utilisateur est connecté via Firebase
-                login(authUser);
+    return () => unsubscribe();
+  }, []);
 
-                if (userData) {
-                    login({ ...authUser, ...userData });
-                }
-            } else {
-                // L'utilisateur n'est pas connecté
-                logout();
-            }
-        });
-        
-        return () => unsubscribe();
-    }, [login, logout]);
-
-    console.log(user);
-
-    return (
-        <>
-            <h1 className="dashboard-title">Dashboard</h1>
-            {user ? (
+  return (
+    <div className='account-container'>
+      <Menu />
+      <div className='account-content'>
+        <h1 className='dashboard-title'>{t('dashboard')}</h1>
+        {user ? (
+          <div className='dashboard'>
+            <p className='connect-user'>L'utilisateur est connecté</p>
+            <p>{t('name')}: {user.lastName}</p>
+            <p>{t('firstName')}: {user.firstName}</p>
+            <p>{t('mail')}: {user.email}</p>
+            <p>{t('phoneNumber')}: {user.phoneNumber}</p>
+            <div className='tab-dashboard'>
+              <div className='connection-info'>
+                <h2>{t('connexionInformation')}</h2>
                 <div>
-                    <p className="connect-user">L'utilisateur est connecté.</p>
-                    <p>Nom d'utilisateur : {user.lastName}</p>
-                    <p>Adresse e-mail : {user.email}</p>
+                  <p>{t('dateCreationAccount')}: {createdAt && new Date(createdAt).toLocaleString('fr-FR')}</p>
                 </div>
-                ) : (
-                <p className="connect-user">L'utilisateur n'est pas connecté.</p>
-            )}
-        </>
-    );
-}
+                <div>
+                  <p>{t('dateLastConnexionAccount')}: {lastLogin && new Date(lastLogin).toLocaleString('fr-FR')}</p>
+                </div>
+            </div>
+              <div className='recent-activity'>
+                <h2>{t('recentActivity')}</h2>
+              </div>
+            </div>
+          </div>
+        ) : (
+          <p>Connectez-vous pour voir les informations du compte.</p>
+        )}
+      </div>
+    </div>
+  );
+};
 
 export default Account;

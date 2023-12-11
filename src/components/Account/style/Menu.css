@@ -1,0 +1,22 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    background-color: #333; 
+    padding: 20px;
+    width: 200px; 
+    height: auto;
+    color: white;
+    margin-top: 120px;
+}
+  
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-top: 80px;
+}
+  
+.menu a:hover {
+    text-decoration: underline;
+}
