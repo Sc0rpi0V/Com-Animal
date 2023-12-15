@@ -29,8 +29,8 @@ import ResetPassword from "./components/Account/MenuDashboard/ResetPassword";
 import ChangeAddresss from "./components/Account/MenuDashboard/ChangeAddress";
 import ShowEcommerce from "./views/ShowEcommerce";
 import Panier from "./components/Ecommerce/Panier";
-import FormationHtml from "./components/Formation/FormationHtml";
-import FormationCSS from "./components/Formation/FormationCss";
+import FirstFormation from "./components/Formation/FirstFormation";
+import SecondFormation from "./components/Formation/SecondFormation";
 
 
 const Router = () => {
@@ -59,8 +59,8 @@ const Router = () => {
             <Route exact path="/about" element={<About />} />
             <Route exact path="/showecommerce" element={<ShowEcommerce />} />
             <Route exact path="/panier" element={<Panier />} />
-            <Route exact path="/formationhtml" element={<FormationHtml />} />
-            <Route exact path="/formationcss" element={<FormationCSS />} />
+            <Route exact path="/firstformation" element={<FirstFormation />} />
+            <Route exact path="/secondformation" element={<SecondFormation />} />
             <Route path="/dashboard/payments" element={<CreditCardForm />} />
             <Route exact path="/settings" element={<Settings />} />
             <Route exact path="*" element={<NotFound />} />

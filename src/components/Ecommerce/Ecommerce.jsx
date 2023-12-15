@@ -10,17 +10,17 @@ const Ecommerce = ({addToCart}) => {
     const [cartItems, setCartItems] = useState([]);
     const [cardsData] = useState([
         {
-            name: "Html",
-            description: "Cours sur les bases HTML pour réaliser votre site",
+            name: "Introduction",
+            description: "Le Fondement de la Communication Animale",
             duration: "Durée : 3H00",
             stars: 5,
             price: 90.00,
             difficultyOptions: ["blue"],
-            link: "/formationhtml"
+            link: "/firstformation"
         },
         {
-            name: "CSS",
-            description: "Cours sur les bases CSS pour réaliser un premier site",
+            name: "Méditation de Connexion",
+            description: "Pratique de la Méditation de Connexion",
             duration: "Durée : 3H00",
             stars: 5,
             price: 90.00,
@@ -28,8 +28,8 @@ const Ecommerce = ({addToCart}) => {
             link: "/formationcss"
         },
         {
-            name: "Javascript",
-            description: "Cours sur les bases Javascript pour réaliser un premier site",
+            name: "Photo Silencieuse",
+            description: "La Puissance de la Visualisation",
             duration: "Durée : 3H00",
             stars: 5,
             price: 90.00,
@@ -37,8 +37,8 @@ const Ecommerce = ({addToCart}) => {
             link: "/formationjs"
         },
         {
-            name: "ReactJs",
-            description: "Cours sur les bases ReactJs pour réaliser un premier site",
+            name: "Conversation Écrite",
+            description: "Établir une Communication Écrite",
             duration: "Durée : 3H00",
             stars: 5,
             price: 90.00,
@@ -46,8 +46,8 @@ const Ecommerce = ({addToCart}) => {
             link: "/formationreact"
         },
         {
-            name: "PHP",
-            description: "Cours sur les bases PHP pour réaliser un premier site",
+            name: "Observation Empathique",
+            description: "Développer l'Empathie envers les Animaux",
             duration: "Durée : 3H00",
             stars: 5,
             price: 90.00,
@@ -55,8 +55,8 @@ const Ecommerce = ({addToCart}) => {
             link: "/formationphp"
         },
         {
-            name: "WordPress",
-            description: "Cours sur les bases WordPress pour réaliser un premier site",
+            name: "Marche Consciente",
+            description: "La Connexion à travers l'Activité Physique",
             duration: "Durée : 3H00",
             stars: 5,
             price: 90.00,
@@ -64,8 +64,8 @@ const Ecommerce = ({addToCart}) => {
             link: "/formationwordpress"
         },
         {
-            name: "Python",
-            description: "Cours sur les bases Python pour réaliser un premier site",
+            name: "Application Pratique",
+            description: "Mise en Pratique Globale",
             duration: "Durée : 3H00",
             stars: 5,
             price: 90.00,
@@ -73,8 +73,26 @@ const Ecommerce = ({addToCart}) => {
             link: "/formationpython"
         },
         {
-            name: "Symfony",
-            description: "Cours sur les bases Symfony pour réaliser un premier site",
+            name: "Éthique et Respect ",
+            description: "Respect envers les Animaux et Éthique",
+            duration: "Durée : 3H00",
+            stars: 5,
+            price: 90.00,
+            difficultyOptions: ["blue"],
+            link: "/formationsymfony"
+        },
+        {
+            name: "Ressources et Outils",
+            description: "Ressources pour Approfondir la Communication Animale",
+            duration: "Durée : 3H00",
+            stars: 5,
+            price: 90.00,
+            difficultyOptions: ["blue"],
+            link: "/formationsymfony"
+        },
+        {
+            name: "Conclusion",
+            description: "Intégration et Continuité",
             duration: "Durée : 3H00",
             stars: 5,
             price: 90.00,
