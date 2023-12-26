@@ -24,12 +24,13 @@ const SignUp = () => {
   const { t } = useTranslation();
 
   const validatePassword = (password) => {
-    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{9,}$/;
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&+])[A-Za-z\d@$!%*?&+]{9,}$/;
     return passwordRegex.test(password);
   };
 
   const handleSignUp = async () => {
-    if (!email || !password || !firstName || !lastName || !phoneNumber || !confirmPassword || !address || !city || !state || !zipCode || !age) {
+    if (!email || !password || !firstName || !lastName || !phoneNumber || !confirmPassword || !address || !city 
+      || !state || !zipCode || !age) {
       setErrorMessage(t('fillAllFields'));
       return;
     }

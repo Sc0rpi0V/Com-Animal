@@ -2,11 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { collection, getDocs, deleteDoc, doc } from 'firebase/firestore';
 import './style/Panier.css';
 import { db } from "../../firebase"; 
+import { useTranslation } from "react-i18next";
 
 const Panier = () =>  {
     const [cartItems, setCartItems] = useState([]);
     const [selectedItem, setSelectedItem] = useState(null);
     const [totalPrice, setTotalPrice] = useState(0);
+
+    const { t } = useTranslation();
 
     useEffect(() => {
         const fetchCartItems = async () => {
@@ -60,7 +63,7 @@ const Panier = () =>  {
         <>
             <div className="panier">
                 <div className="panier-info">
-                    <h2>Panier</h2>
+                    <h2>{t('cart')}</h2>
                     <ul>
                         {cartItems.map((item, index) => (
                             <li key={index} onClick={() => handleItemSelection(item)}>
@@ -75,10 +78,10 @@ const Panier = () =>  {
                 <div className="panier-details">
                     {selectedItem && (
                         <div className="item-details">
-                            <h3>Informations de la formation</h3>
-                            <p>Nom : {selectedItem.name}</p>
-                            <p>Prix : ${selectedItem.price}</p>
-                            <button onClick={handlePurchase}>Acheter</button>
+                            <h3>{t('trainingInformation')}</h3>
+                            <p>{t('name')} : {selectedItem.name}</p>
+                            <p>{t('priceCart')} : ${selectedItem.price}</p>
+                            <button onClick={handlePurchase}>{t('buy')}</button>
                         </div>
                     )}
                     <div className="total-price">

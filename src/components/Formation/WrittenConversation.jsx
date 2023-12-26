@@ -1,8 +1,8 @@
 import React from 'react';
 import { useTranslation } from "react-i18next";
-import './style/FourthFormation.css';
+import './style/WrittenConversation.jsx.css';
 
-const ConversationEcriteModule = () => {
+const WrittenConversation = () => {
 
     const { t } = useTranslation();
 
@@ -30,4 +30,4 @@ const ConversationEcriteModule = () => {
     );
 };
 
-export default ConversationEcriteModule;
+export default WrittenConversation;

@@ -1,8 +1,8 @@
 import React from 'react';
 import { useTranslation } from "react-i18next";
-import './style/FormationEigth.css';
+import './style/EhticsRespect.css';
 
-const EthiqueRespectModule = () => {
+const EhticsRespect = () => {
 
   const { t } = useTranslation();
 
@@ -29,4 +29,4 @@ const EthiqueRespectModule = () => {
   );
 };
 
-export default EthiqueRespectModule;
+export default EhticsRespect;

@@ -1,8 +1,8 @@
 import React from 'react';
-import './style/FormationNine.css';
+import './style/RessourcesTools.css';
 import { useTranslation } from "react-i18next";
 
-const RessourcesOutilsModule = () => {
+const RessourcesTools = () => {
 
   const { t } = useTranslation();
 
@@ -29,4 +29,4 @@ const RessourcesOutilsModule = () => {
   );
 };
 
-export default RessourcesOutilsModule;
+export default RessourcesTools;

@@ -1,8 +1,8 @@
 import React from 'react';
 import { useTranslation } from "react-i18next";
-import './style/SixthFormation.css';
+import './style/ConsciousWalking.css';
 
-const MarcheConscienteModule = () => {
+const ConsciousWalking = () => {
 
     const { t } = useTranslation();
 
@@ -32,4 +32,4 @@ const MarcheConscienteModule = () => {
     );
 };
 
-export default MarcheConscienteModule;
+export default ConsciousWalking;

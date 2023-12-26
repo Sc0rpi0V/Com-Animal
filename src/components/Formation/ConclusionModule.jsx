@@ -1,5 +1,5 @@
 import React from 'react';
-import './style/FormationTen.css';
+import './style/ConclusionModule.css';
 import { useTranslation } from "react-i18next";
 
 const ConclusionModule = () => {

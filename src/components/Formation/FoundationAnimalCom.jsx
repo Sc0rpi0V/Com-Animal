@@ -1,8 +1,8 @@
 import React from "react";
-import './style/FirstFormation.css';
+import './style/FoundationAnimalCom.css';
 import { useTranslation } from "react-i18next";
 
-const FirstFormation = () => {
+const FoundationAnimalCom = () => {
 
     const { t } = useTranslation();
 
@@ -42,4 +42,4 @@ const FirstFormation = () => {
     );
 }
 
-export default FirstFormation;
+export default FoundationAnimalCom;

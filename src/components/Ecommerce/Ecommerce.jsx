@@ -4,8 +4,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { db } from "../../firebase"; 
 import { addDoc, collection } from 'firebase/firestore';
+import { useTranslation } from "react-i18next";
 
 const Ecommerce = ({addToCart}) => {
+
+    const { t } = useTranslation();
     
     const [cartItems, setCartItems] = useState([]);
     const [cardsData] = useState([
@@ -16,7 +19,7 @@ const Ecommerce = ({addToCart}) => {
             stars: 5,
             price: 90.00,
             difficultyOptions: ["blue"],
-            link: "/firstformation"
+            link: "/foundationanimalcom"
         },
         {
             name: "Méditation de Connexion",
@@ -25,7 +28,7 @@ const Ecommerce = ({addToCart}) => {
             stars: 5,
             price: 90.00,
             difficultyOptions: ["blue"],
-            link: "/formationcss"
+            link: "/connectionmeditation"
         },
         {
             name: "Photo Silencieuse",
@@ -34,7 +37,7 @@ const Ecommerce = ({addToCart}) => {
             stars: 5,
             price: 90.00,
             difficultyOptions: ["blue"],
-            link: "/formationjs"
+            link: "/silentphoto"
         },
         {
             name: "Conversation Écrite",
@@ -43,7 +46,7 @@ const Ecommerce = ({addToCart}) => {
             stars: 5,
             price: 90.00,
             difficultyOptions: ["blue"],
-            link: "/formationreact"
+            link: "/writtenconversation"
         },
         {
             name: "Observation Empathique",
@@ -52,7 +55,7 @@ const Ecommerce = ({addToCart}) => {
             stars: 5,
             price: 90.00,
             difficultyOptions: ["blue"],
-            link: "/formationphp"
+            link: "/empatheticobservation"
         },
         {
             name: "Marche Consciente",
@@ -61,7 +64,7 @@ const Ecommerce = ({addToCart}) => {
             stars: 5,
             price: 90.00,
             difficultyOptions: ["blue"],
-            link: "/formationwordpress"
+            link: "/consciouswalking"
         },
         {
             name: "Application Pratique",
@@ -70,7 +73,7 @@ const Ecommerce = ({addToCart}) => {
             stars: 5,
             price: 90.00,
             difficultyOptions: ["blue"],
-            link: "/formationpython"
+            link: "/praticalapplication"
         },
         {
             name: "Éthique et Respect ",
@@ -79,7 +82,7 @@ const Ecommerce = ({addToCart}) => {
             stars: 5,
             price: 90.00,
             difficultyOptions: ["blue"],
-            link: "/formationsymfony"
+            link: "/ethicsrespect"
         },
         {
             name: "Ressources et Outils",
@@ -88,7 +91,7 @@ const Ecommerce = ({addToCart}) => {
             stars: 5,
             price: 90.00,
             difficultyOptions: ["blue"],
-            link: "/formationsymfony"
+            link: "/ressourcestools"
         },
         {
             name: "Conclusion",
@@ -97,7 +100,7 @@ const Ecommerce = ({addToCart}) => {
             stars: 5,
             price: 90.00,
             difficultyOptions: ["blue"],
-            link: "/formationsymfony"
+            link: "/conclusionmodule"
         },
     ]);
 
@@ -126,7 +129,7 @@ const Ecommerce = ({addToCart}) => {
 
     return (
         <>
-            <h4>Formations</h4>
+            <h4>{t('formationsEcommerce')}</h4>
             <a href="/panier" className="cart-container">
                 <FontAwesomeIcon icon={faShoppingCart} className="cart-icon" size="2x" />
                 <span className="cart-count">{cartCount}</span>
@@ -137,9 +140,9 @@ const Ecommerce = ({addToCart}) => {
                         <div className="logo-cart">
                         </div>
                         <div className="info">
-                            <span className="name">{card.name}</span>
-                            <p>{card.description}</p>
-                            <p>{card.duration}</p>
+                            <span className="name">{t(`cards.${index}.name`)}</span>
+                            <p>{t(`cards.${index}.description`)}</p>
+                            <p>{t(`cards.${index}.duration`)}</p>
                             <div className="stars">
                                 {[...Array(card.stars)].map((_, i) => (
                                     <FontAwesomeIcon key={i} icon={faStar} size="2x" color="blue" />
@@ -148,7 +151,7 @@ const Ecommerce = ({addToCart}) => {
                         </div>
                         <div className="color-price">
                             <div className="color-option">
-                                <span className="color">Difficulty :</span>
+                                <span className="color">{t('difficulty')}</span>
                                 <div className="circles">
                                     <span className="circle blue active" data-option= "blue"></span>
                                     <span className="circle blue active" data-option= "blue"></span>
@@ -157,18 +160,18 @@ const Ecommerce = ({addToCart}) => {
                                 </div>
                             </div>
                             <div className="price">
-                                <span className="price_num">90.00$</span>
-                                <span className="price__letter">Ninety dollar only</span>
+                                <span className="price_num">40.00$</span>
+                                <span className="price__letter">{t('price')}</span>
                             </div>
                         </div>
-                        <div className="see-more-details">
+                        {/* <div className="see-more-details">
                             <button className="more-details-btn" href={card.link}>
-                                <a href={card.link} className="add-link">See More</a>
+                                <a href={card.link} className="add-link">{t('seeMore')}</a>
                             </button>
-                        </div>
+                        </div> */}
                         <div className="add-cart button">
                             <div className="button-layer"></div>
-                            <button className="add-btn-card" onClick={() => handleAddToCart(index)}>Add To Cart</button>
+                            <button className="add-btn-card" onClick={() => handleAddToCart(index)}>{t('addToCart')}</button>
                         </div>
                     </div>
                 ))}

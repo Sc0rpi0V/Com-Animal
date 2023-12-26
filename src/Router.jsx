@@ -29,8 +29,16 @@ import ResetPassword from "./components/Account/MenuDashboard/ResetPassword";
 import ChangeAddresss from "./components/Account/MenuDashboard/ChangeAddress";
 import ShowEcommerce from "./views/ShowEcommerce";
 import Panier from "./components/Ecommerce/Panier";
-import FirstFormation from "./components/Formation/FirstFormation";
-import SecondFormation from "./components/Formation/SecondFormation";
+import FoundationAnimalCom from "./components/Formation/FoundationAnimalCom";
+import ConnectionMeditation from "./components/Formation/ConnectionMeditation";
+import PhotoSilencieuseModule from "./components/Formation/SilentPhoto";
+import WrittenConversation from "./components/Formation/WrittenConversation";
+import EmpatheticObservation from "./components/Formation/EmpatheticObservation";
+import ConsciousWalking from "./components/Formation/ConsciousWalking";
+import PraticalApplication from "./components/Formation/PraticalApplication";
+import RessourcesTools from "./components/Formation/RessourcesTools";
+import EhticsRespect from "./components/Formation/EhticsRespect";
+import ConclusionModule from "./components/Formation/ConclusionModule";
 
 
 const Router = () => {
@@ -59,8 +67,16 @@ const Router = () => {
             <Route exact path="/about" element={<About />} />
             <Route exact path="/showecommerce" element={<ShowEcommerce />} />
             <Route exact path="/panier" element={<Panier />} />
-            <Route exact path="/firstformation" element={<FirstFormation />} />
-            <Route exact path="/secondformation" element={<SecondFormation />} />
+            <Route exact path="/foundationanimalcom" element={<FoundationAnimalCom />} />
+            <Route exact path="/connectionmeditation" element={<ConnectionMeditation />} />
+            <Route exact path="/silentphoto" element={<PhotoSilencieuseModule />} />
+            <Route exact path="/writtenconversation" element={<WrittenConversation />} />
+            <Route exact path="/empatheticobservation" element={<EmpatheticObservation />} />
+            <Route exact path="/consciouswalking" element={<ConsciousWalking />} />
+            <Route exact path="/praticalapplication" element={<PraticalApplication />} />
+            <Route exact path="/ethicsrespect" element={<EhticsRespect />} />
+            <Route exact path="/ressourcestools" element={<RessourcesTools />} />
+            <Route exact path="/conclusionmodule" element={<ConclusionModule />} />
             <Route path="/dashboard/payments" element={<CreditCardForm />} />
             <Route exact path="/settings" element={<Settings />} />
             <Route exact path="*" element={<NotFound />} />

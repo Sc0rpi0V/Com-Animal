@@ -1,8 +1,8 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import './style/SecondFormation.css';
+import './style/ConnectionMeditation.css';
 
-const SecondFormation = () => {
+const ConnectionMeditation = () => {
 
     const { t } = useTranslation();
 
@@ -35,4 +35,4 @@ const SecondFormation = () => {
     );
 }
 
-export default SecondFormation;
+export default ConnectionMeditation;

@@ -1,8 +1,8 @@
 import React from 'react';
 import { useTranslation } from "react-i18next";
-import './style/FifthFormation.css';
+import './style/EmpatheticObservation.css';
 
-const ObservationEmpathiqueModule = () => {
+const EmpatheticObservation = () => {
 
     const { t } = useTranslation();
     
@@ -32,4 +32,4 @@ const ObservationEmpathiqueModule = () => {
     );
 };
 
-export default ObservationEmpathiqueModule;
+export default EmpatheticObservation;

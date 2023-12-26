@@ -242,7 +242,66 @@ i18next.use(initReactI18next).init({
         eighthpTenthFormation: 'Participez à des discussions dynamiques sur les tendances émergentes dans le domaine, restant ainsi à la pointe de l\'évolution de la communication interespèces.',
         ninthpTenthFormation: 'Plongez dans l\'exploration de nouvelles approches et technologies, ouvrant ainsi la porte à des découvertes passionnantes et à des avancées significatives.',
 
-
+        formationsEcommerce: 'Formations',
+        difficulty: 'Difficulté :',
+        addToCart: 'Ajouter au panier',
+        price: 'Quarante euros seulement',
+        cards: [
+          {
+            name: 'Introduction',
+            description: 'Le Fondement de la Communication Animale',
+            duration: 'Durée : 3H00',
+          },
+          {
+            name: 'Méditation de Connexion',
+            description: 'Pratique de la Méditation de Connexion',
+            duration: 'Durée : 3H00',
+          },
+          {
+            name: 'Photo Silencieuse',
+            description: 'La Puissance de la Visualisation',
+            duration: 'Durée : 3H00',
+          },
+          {
+            name: 'Conversation Écrite',
+            description: 'Établir une Communication Écrite',
+            duration: 'Durée : 3H00',
+          },
+          {
+            name: 'Observation Empathique',
+            description: 'Développer l\'Empathie envers les Animaux',
+            duration: 'Durée : 3H00',
+          },
+          {
+            name: 'Marche Consciente',
+            description: 'La Connexion à travers l\'Activité Physique',
+            duration: 'Durée : 3H00',
+          },
+          {
+            name: 'Application Pratique',
+            description: 'Mise en Pratique Globale',
+            duration: 'Durée : 3H00',
+          },
+          {
+            name: 'Éthique et Respect',
+            description: 'Respect envers les Animaux et Éthique',
+            duration: 'Durée : 3H00',
+          },
+          {
+            name: 'Ressources et Outils',
+            description: 'Ressources pour Approfondir la Communication Animale',
+            duration: 'Durée : 3H00',
+          },
+          {
+            name: 'Conclusion',
+            description: 'Intégration et Continuité',
+            duration: 'Durée : 3H00',
+          },
+        ],
+        cart: 'Panier',
+        priceCart: 'Prix',
+        buy: 'Acheter',
+        trainingInformation : 'Informations de la formation',
 
         cookies: 'Ce site utilise des cookies pour améliorer votre expérience. En continuant à naviguer sur le site, vous acceptez notre utilisation des cookies.',
         agreeCookies: 'J\'accepte',
@@ -272,7 +331,6 @@ i18next.use(initReactI18next).init({
         name: 'Nom',
         labelName: 'Indiquez votre nom',
         firstName: 'Prénom',
-        labelFirstName: 'Indiquez votre prénom',
         mail: 'Adresse Mail',
         labelMail: 'Indiquez votre adresse mail',
         labelMessage: 'Indiquez votre message',
@@ -512,6 +570,66 @@ i18next.use(initReactI18next).init({
         eighthpTenthFormation: 'Participate in dynamic discussions on emerging trends in the field, staying at the forefront of the evolution of interspecies communication.',
         ninthpTenthFormation: 'Dive into the exploration of new approaches and technologies, thus opening the door to exciting discoveries and significant advancements.',
 
+        formationsEcommerce: 'Formations',
+        difficulty: "Difficulty:",
+        addToCart: "Add to Cart",
+        price: 'Only forty euros',
+        cards: [
+          {
+            name: "Introduction",
+            description: "The Foundation of Animal Communication",
+            duration: "Duration: 3 hours"
+          },
+          {
+            name: "Connection Meditation",
+            description: "Practice of Connection Meditation",
+            duration: "Duration: 3 hours"
+          },
+          {
+            name: "Silent Photo",
+            description: "The Power of Visualization",
+            duration: "Duration: 3 hours"
+          },
+          {
+            name: "Written Conversation",
+            description: "Establishing a Written Communication",
+            duration: "Duration: 3 hours"
+          },
+          {
+            name: "Empathetic Observation",
+            description: "Developing Empathy towards Animals",
+            duration: "Duration: 3 hours"
+          },
+          {
+            name: "Conscious Walking",
+            description: "Connection through Physical Activity",
+            duration: "Duration: 3 hours"
+          },
+          {
+            name: "Practical Application",
+            description: "Global Practical Implementation",
+            duration: "Duration: 3 hours"
+          },
+          {
+            name: "Ethics and Respect",
+            description: "Respect for Animals and Ethics",
+            duration: "Duration: 3 hours"
+          },
+          {
+            name: "Resources and Tools",
+            description: "Resources for Deepening Animal Communication",
+            duration: "Duration: 3 hours"
+          },
+          {
+            name: "Conclusion",
+            description: "Integration and Continuity",
+            duration: "Duration: 3 hours"
+          }
+        ],
+        cart: 'Cart',
+        priceCart: 'Price',
+        buy: 'Buy',
+        trainingInformation: 'Training Information',
 
         cookies: 'This site uses cookies to improve your experience. Continuing to navigate on the site, you accept our use of cookies.',
         agreeCookies: 'I agree',
