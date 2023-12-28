@@ -5,7 +5,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Register from "./views/Register";
 import About from "./views/About";
-import CreditCardForm from "./views/CreditCardForm";
+// import CreditCardForm from "./views/CreditCardForm";
 import Home from "./views/Home";
 import Settings from "./views/Settings";
 import NotFound from "./views/NotFound";
@@ -79,7 +79,7 @@ const Router = () => {
             <Route exact path="/ethicsrespect" element={<EhticsRespect />} />
             <Route exact path="/ressourcestools" element={<RessourcesTools />} />
             <Route exact path="/conclusionmodule" element={<ConclusionModule />} />
-            <Route path="/dashboard/payments" element={<CreditCardForm />} />
+            {/* <Route path="/dashboard/payments" element={<CreditCardForm />} /> */}
             <Route exact path="/settings" element={<Settings />} />
             <Route exact path="*" element={<NotFound />} />
         </Routes>
