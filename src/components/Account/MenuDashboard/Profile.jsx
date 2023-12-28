@@ -149,7 +149,7 @@ const UserProfile = () => {
                             <div className='button-container'> 
                                 <button onClick={handleSave} className="save profil-button">{t('save')}</button>
                                 <button type="reset" className="reset profil-button">{t('reset')}</button>
-                                <button type="submit" className="cancel profil-button">{t('Annuler')}</button>
+                                <button type="submit" className="cancel profil-button">{t('cancel')}</button>
                             </div>
                         </form>
                     </div>
