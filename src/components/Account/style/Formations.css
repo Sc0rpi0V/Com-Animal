@@ -1,0 +1,122 @@
+:root {
+    --black: #333;
+    --black-2: #161616;
+    --gray: #707070;
+    --white: #fff;
+}
+
+.formations-container {
+    display: flex;
+}
+
+.formations-content {
+    padding: 20px;
+    background-color: grey;
+    width: 1250px;
+    height: auto;
+    margin-top: 120px;
+}
+
+.formations-title {
+    color: white;
+}
+
+.formations {
+    margin-top: 50px;
+    border-radius: 5px;
+    border: 3px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: auto;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.formation-card {
+    margin: 10px 0 0 20px;
+    position: relative;
+    max-width: 22em;
+    width: 100%;
+    border-radius: 25px;
+    padding: 1.4em;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+    overflow: hidden;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.logo-cart img {
+    max-width: 100%; 
+}
+
+.info-price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .price_num {
+        font-size: 1.5em;
+        font-weight: 600;
+        color: var(--gray);
+    }
+
+    .price_letter {
+        font-size: 1.2em;
+        font-weight: 600;
+        margin-top: 0.5em;
+        color: var(--gray);
+    }
+}
+
+.info-card {
+    flex-grow: 1;
+}
+
+.info-download {
+    text-align: center;
+}
+
+.btn-download {
+    position: relative;
+    height: 3em;
+    width: 100%;
+    border-radius: 25px;
+    margin-top: 1em;
+    overflow: hidden;
+
+    .button-layer {
+        position: absolute;
+        height: 100%;
+        width: 300%;
+        background-image: linear-gradient(135deg, #9708cc, #43cbff, #9708cc, #43cbff);
+        transition: all 0.4s ease;
+        border-radius: 25px;
+        left: -100%;
+    }
+
+    &:hover .button-layer {
+        left: 0;
+    }
+
+    button {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        background: none;
+        outline: none;
+        border: none;
+        font-size: 1.2em;
+        font-weight: 600;
+        letter-spacing: 1px;
+        color: var(--white);
+    }
+}
+
+.btn-download:hover {
+    background-color: #45a049;
+}

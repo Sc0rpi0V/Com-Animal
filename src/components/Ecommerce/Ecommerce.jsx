@@ -5,6 +5,16 @@ import { faStar, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { db } from "../../firebase"; 
 import { addDoc, collection } from 'firebase/firestore';
 import { useTranslation } from "react-i18next";
+import ConnectionImage from "../Formation/img/Connection.avif";
+import SilentPhoto from "../Formation/img/Silent.webp";
+import IntroductionPhoto from "../Formation/img/Introduction.jpeg";
+import ObservationPhoto from "../Formation/img/Observation.jpeg";
+import ToolsPhoto from "../Formation/img/Tools.jpeg";
+import WalkingPhoto from "../Formation/img/Walking.jpeg";
+import ConclusionPhoto from "../Formation/img/Conclusion.jpeg";
+import PraticalPhoto from "../Formation/img/Pratical.jpeg";
+import EthicsPhoto from "../Formation/img/Ethics.jpeg";
+import ConversationPhoto from "../Formation/img/Conversation.jpeg";
 
 const Ecommerce = ({addToCart}) => {
 
@@ -17,90 +27,100 @@ const Ecommerce = ({addToCart}) => {
             description: "Le Fondement de la Communication Animale",
             duration: "Durée : 3H00",
             stars: 5,
-            price: 90.00,
+            price: 40.00,
             difficultyOptions: ["blue"],
-            link: "/foundationanimalcom"
+            link: "/foundationanimalcom",
+            image: IntroductionPhoto
         },
         {
             name: "Méditation de Connexion",
             description: "Pratique de la Méditation de Connexion",
             duration: "Durée : 3H00",
             stars: 5,
-            price: 90.00,
+            price: 40.00,
             difficultyOptions: ["blue"],
-            link: "/connectionmeditation"
+            link: "/connectionmeditation",
+            image: ConnectionImage
         },
         {
             name: "Photo Silencieuse",
             description: "La Puissance de la Visualisation",
             duration: "Durée : 3H00",
             stars: 5,
-            price: 90.00,
+            price: 40.00,
             difficultyOptions: ["blue"],
-            link: "/silentphoto"
+            link: "/silentphoto",
+            image: SilentPhoto
         },
         {
             name: "Conversation Écrite",
             description: "Établir une Communication Écrite",
             duration: "Durée : 3H00",
             stars: 5,
-            price: 90.00,
+            price: 40.00,
             difficultyOptions: ["blue"],
-            link: "/writtenconversation"
+            link: "/writtenconversation",
+            image: ConversationPhoto
         },
         {
             name: "Observation Empathique",
             description: "Développer l'Empathie envers les Animaux",
             duration: "Durée : 3H00",
             stars: 5,
-            price: 90.00,
+            price: 40.00,
             difficultyOptions: ["blue"],
-            link: "/empatheticobservation"
+            link: "/empatheticobservation",
+            image:  ObservationPhoto
         },
         {
             name: "Marche Consciente",
             description: "La Connexion à travers l'Activité Physique",
             duration: "Durée : 3H00",
             stars: 5,
-            price: 90.00,
+            price: 40.00,
             difficultyOptions: ["blue"],
-            link: "/consciouswalking"
+            link: "/consciouswalking",
+            image: WalkingPhoto
         },
         {
             name: "Application Pratique",
             description: "Mise en Pratique Globale",
             duration: "Durée : 3H00",
             stars: 5,
-            price: 90.00,
+            price: 40.00,
             difficultyOptions: ["blue"],
-            link: "/praticalapplication"
+            link: "/praticalapplication",
+            image: PraticalPhoto
         },
         {
             name: "Éthique et Respect ",
             description: "Respect envers les Animaux et Éthique",
             duration: "Durée : 3H00",
             stars: 5,
-            price: 90.00,
+            price: 40.00,
             difficultyOptions: ["blue"],
-            link: "/ethicsrespect"
+            link: "/ethicsrespect",
+            image: EthicsPhoto
         },
         {
             name: "Ressources et Outils",
             description: "Ressources pour Approfondir la Communication Animale",
             duration: "Durée : 3H00",
             stars: 5,
-            price: 90.00,
+            price: 40.00,
             difficultyOptions: ["blue"],
-            link: "/ressourcestools"
+            link: "/ressourcestools",
+            image: ToolsPhoto
         },
         {
             name: "Conclusion",
             description: "Intégration et Continuité",
             duration: "Durée : 3H00",
             stars: 5,
-            price: 90.00,
+            price: 40.00,
             difficultyOptions: ["blue"],
-            link: "/conclusionmodule"
+            link: "/conclusionmodule",
+            image: ConclusionPhoto
         },
     ]);
 
@@ -120,6 +140,7 @@ const Ecommerce = ({addToCart}) => {
                 description: card.description,
                 duration: card.duration,
                 price: card.price,
+                image: card.image,
             });
             console.log('Article ajouté au panier avec succès.');
         } catch (error) {
@@ -137,7 +158,7 @@ const Ecommerce = ({addToCart}) => {
             <div className="container-ecommerce">
                 {cardsData.map((card, index) => (
                     <div key={index} className="card-ecommerce">
-                        <div className="logo-cart">
+                        <div className="logo-cart"><img src={ConnectionImage} alt="cover hard work"></img>
                         </div>
                         <div className="info">
                             <span className="name">{t(`cards.${index}.name`)}</span>
@@ -160,7 +181,7 @@ const Ecommerce = ({addToCart}) => {
                                 </div>
                             </div>
                             <div className="price">
-                                <span className="price_num">40.00$</span>
+                                <span className="price_num">40.00 €</span>
                                 <span className="price__letter">{t('price')}</span>
                             </div>
                         </div>

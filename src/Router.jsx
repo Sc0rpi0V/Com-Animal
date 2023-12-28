@@ -24,7 +24,8 @@ import DispSignUp from "./views/DispSignUp";
 import LogIn from "./components/SignUp/LogIn";
 import SignUp from "./components/SignUp/SignUp";
 import DispAccount from "./views/DispAccount";
-import Profile from "./components/Account/MenuDashboard/Profile";
+import UserProfile from "./components/Account/MenuDashboard/Profile";
+import Formations from "./components/Account/MenuDashboard/Formations";
 import ResetPassword from "./components/Account/MenuDashboard/ResetPassword";
 import ChangeAddresss from "./components/Account/MenuDashboard/ChangeAddress";
 import ShowEcommerce from "./views/ShowEcommerce";
@@ -49,7 +50,8 @@ const Router = () => {
             <Route exact path="/auth" element={<LogIn />} />
             <Route exact path="/authconfirm" element={<SignUp />} />
             <Route exact path="/account" element={<DispAccount />} />
-            <Route exact path="/profile" element={<Profile />} />
+            <Route exact path="/profile" element={<UserProfile />} />
+            <Route exact path="/formations" element={<Formations />} />
             <Route exact path="/changepassword" element={<ResetPassword />} />
             <Route exact path="/changeaddress" element={<ChangeAddresss />} />
             <Route exact path="/descriptionaboutme" element={<DescriptionAboutMe />} />

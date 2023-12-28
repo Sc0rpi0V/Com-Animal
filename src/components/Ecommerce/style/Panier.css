@@ -1,33 +1,60 @@
+.title {
+    color: white;
+    margin-top: 120px;
+}
+
 .panier {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 20px;
-    margin-top: 160px;
+    margin: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 100px;
     background-color: #fff;
 }
   
 .panier-info {
-    flex-basis: 60%;
     padding: 10px;
     border: 1px solid #ccc;
     margin-right: 10px;
-}
-  
-.panier-info h2 {
-    margin-bottom: 10px;
+    flex: 2;
 }
   
 .panier-info ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
 }
   
 .panier-info li {
     cursor: pointer;
-    padding: 5px;
+    position: relative;
+    list-style: none;
     border: 1px solid #ccc;
-    margin-bottom: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+}
+
+.item-name,
+.item-desc,
+.item-duration {
+  margin: 0;
+  text-align: left;
+}
+
+.item-desc {
+    margin: 0;
+    text-align: left;
+    font-style: italic;
+    color: #666;
+    font-weight: normal; 
+}
+
+.item-price {
+    margin-right: 50px;
 }
   
 .panier-info li:hover {
@@ -45,8 +72,20 @@
 .item-details {
     margin-bottom: 20px;
 }
+
+.item-details-left {
+    flex: 1;
+}
+  
+.item-details-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
   
 .item-details h3 {
+    flex: 2;
+    padding-right: 10px;
     margin-bottom: 10px;
 }
   
@@ -56,18 +95,71 @@
     margin-top: auto;
 }
   
-.total-price h3 {
+.total-price h2 {
     margin-bottom: 10px;
 }
   
-button {
+.btn-delete-card {
     background-color: #007bff;
+    width: 120px;
     color: #1d1515;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
 }
   
-button:hover {
+.btn-delete-card:hover {
     background-color: #0056b3;
+}
+
+.question {
+    align-self: flex-end;
+    text-align: right;
+    margin-top: 85px;
+    border: 1px solid #ccc;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.quantity-controls button {
+    cursor: pointer;
+    margin: 0 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.total-price {
+    flex: 1;
+    text-align: center;
+}
+
+.btn-delete-card {
+    margin-top: 40px;
+    background-color: #ff6262;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.item-details {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.item-details-left img {
+    border-radius: 50%; 
+    border: 2px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
 }

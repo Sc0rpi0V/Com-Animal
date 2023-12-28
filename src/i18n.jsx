@@ -32,7 +32,7 @@ i18next.use(initReactI18next).init({
         numericPhoneNumber: 'Le numéro de téléphone doit contenir uniquement des caractères numériques.',
         connexionInformation: 'Information de connexion',
         dateCreationAccount: 'Date de création du compte',
-        dateLastConnexion: 'Date de dernière connexion',
+        dateLastConnexionAccount: 'Date de dernière connexion',
         recentActivity: 'Actiivité Récente',
         myProfil: 'Mon Profil',
         lastName: 'Nom de Famille',
@@ -246,6 +246,7 @@ i18next.use(initReactI18next).init({
         difficulty: 'Difficulté :',
         addToCart: 'Ajouter au panier',
         price: 'Quarante euros seulement',
+        basketSummary: 'Récapitulatif de mon panier',
         cards: [
           {
             name: 'Introduction',
@@ -574,6 +575,7 @@ i18next.use(initReactI18next).init({
         difficulty: "Difficulty:",
         addToCart: "Add to Cart",
         price: 'Only forty euros',
+        basketSummary: 'Summary of my basket',
         cards: [
           {
             name: "Introduction",
