@@ -68,7 +68,7 @@ i18next.use(initReactI18next).init({
         connexionInformation: 'Information de connexion',
         dateCreationAccount: 'Date de création du compte',
         dateLastConnexionAccount: 'Date de dernière connexion',
-        recentActivity: 'Actiivité Récente',
+        recentActivity: 'Activité Récente',
 
         //Profile
         myProfil: 'Mon Profil',
