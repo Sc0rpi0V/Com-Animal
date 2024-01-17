@@ -31,11 +31,6 @@ const AboutCom = () => {
             <p className="paragraph">{t('secondpAnimalCom')}</p>
             <p className="paragraph">{t('thirdpAnimalCom')}</p>
             <p className="paragraph">{t('fourthpAnimalCom')}</p>
-            {user ? (
-                <p className="paragraph">L'utilisateur est connecté.</p>
-            ) : (
-                <p className="paragraph">L'utilisateur n'est pas connecté.</p>
-            )}
         </div>
     );
 }

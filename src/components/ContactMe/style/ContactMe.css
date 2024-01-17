@@ -17,8 +17,19 @@ input, label, textarea {
 }
 
 #contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     background: #333;
+}
+
+.back-contact {
+    background: white;
+    border-radius: 10px;
+    width: 1000px;
+    height: auto;
+    max-width: 100%;
 }
 
 #contact h4 {
@@ -70,8 +81,9 @@ input, label, textarea {
     border-bottom: 1px solid #ffa600;
 }
 
-.contact button {
+.contact-btn {
     border-radius: 10px;
+    width: 320px;
     border: none;
     background: #ffa600;
     color: #f1f1f1;
@@ -83,7 +95,7 @@ input, label, textarea {
                 background 0.2s ease-in-out;
 }
 
-.contact button:hover {
+.contact-btn:hover {
     border: 1px solid #ffa600;
     background: transparent;
     color: #ffa600;

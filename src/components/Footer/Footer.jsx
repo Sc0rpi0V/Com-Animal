@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <footer>
       <div className="footer">
-       <p className='text-footer'> Copyright &copy; Sc0rpi0V - 2022. {t('madeby')} <i className="fa-solid fa-heart"> Boury Valentin </i></p>
+       <p className='text-footer'> Copyright &copy; {t('madeby')} Boury Valentin - 2022. </p>
       </div>
     </footer>
   );
