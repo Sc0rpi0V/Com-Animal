@@ -11,14 +11,6 @@ body, html {
     background: #000;
 }
 
-p {
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    font-size: calc(13px + 0.2vw);
-    color: #f1f1f1;
-    padding: 0 1rem;
-}
-
 h4,h5 {
     font-family: "Secular One", sans-serif;
 }
@@ -74,4 +66,7 @@ h5 {
 .work-card p {
   font-size: 14px;
   line-height: 1.4;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  padding: 0 1rem;
 }
