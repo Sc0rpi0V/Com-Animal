@@ -1,25 +1,11 @@
 import React from "react";
 import "./style/AboutMe.css";
-import ImgProfil from "./src/profil.jpg";
+import ImgProfil from "./src/profil.jpeg";
 import { useTranslation } from "react-i18next";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSlack, faWordpress, faReact , faSquareGit, faDocker} from "@fortawesome/free-brands-svg-icons";
 
 const AboutMe = () => {
 
-    const { t, i18n } = useTranslation();
-
-    const getWordOrder = () => {
-        return i18n.language === "fr" ? <>{t('developer')} {t('backend')}</> : <>{t('backend')} {t('developer')}</>;
-    };
-
-    const getWordOrder2 = () => {
-        return i18n.language === "fr" ? <>{t('Techno')} {t('backend')}</> : <>{t('backend')} {t('techno')}</>;
-    };
-
-    const getWordOrder3 = () => {
-        return i18n.language === "fr" ? <>{t('Gestion')} {t('backend')}</> : <>{t('backend')} {t('management')}</>;
-    };
+    const { t } = useTranslation();
 
     return (
         <>
@@ -44,21 +30,16 @@ const AboutMe = () => {
                     <h1 className="my-title">{t('myServices')}</h1>
                     <div className="services-list">
                         <div className="first">
-                            <FontAwesomeIcon icon={faSlack} size="5x" />
-                            <h2>{getWordOrder()}</h2>
-                            <p>{t('infoBack')}</p>
+                            <h2>{t('titleFirstService')}</h2>
+                            <p>{t('firstService')}</p>
                         </div>
                         <div className="second">
-                            <FontAwesomeIcon icon={faWordpress} size="5x" />
-                            <FontAwesomeIcon icon={faReact} size="5x" />
-                            <h2>{getWordOrder2()}</h2>
-                            <p>{t('infoTechno')}</p>
+                            <h2>{t('titleSecondService')}</h2>
+                            <p>{t('secondService')}</p>
                         </div>
                         <div className="third">
-                            <FontAwesomeIcon icon={faDocker} size="5x" />
-                            <FontAwesomeIcon icon={faSquareGit} size="5x" />
-                            <h2>{getWordOrder3()}</h2>
-                            <p>{t('infoGestion')}</p>
+                            <h2>{t('titleThirdService')}</h2>
+                            <p>{t('thirdService')}</p>
                         </div>
                     </div>
                 </div>
