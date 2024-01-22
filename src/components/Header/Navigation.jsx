@@ -4,7 +4,7 @@ import logo from "../../img/logo.jpeg";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub} from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faWhatsapp} from "@fortawesome/free-brands-svg-icons";
 import { useAuth } from "../../AuthContext";
 import Disconnect from '../Disconnect/Disconnect';
 // eslint-disable-next-line
@@ -13,6 +13,8 @@ import i18next from '../../i18n';
 const Navigation = () => {
     const { t, i18n } = useTranslation();
     const { user } = useAuth();
+    // eslint-disable-next-line no-unused-vars
+    const [whatsappNumber, setWhatsappNumber] = useState("+33772266018");
 
     function handleLangChange(event) {
         console.log(event.target.value);
@@ -30,6 +32,12 @@ const Navigation = () => {
     const handleNavLinkClick = () => {
         setNavActive(false);
         setBurgerActive(false);
+    };
+
+    const handleWhatsAppClick = () => {
+        const whatsappUrl = `https://wa.me/${whatsappNumber}`;
+        window.open(whatsappUrl, "_blank");
+        handleNavLinkClick();
     };
 
     useEffect(() => {
@@ -57,8 +65,11 @@ const Navigation = () => {
             </NavLink>
             <div className="social-nav">
                 <ul>
-                    <li><a href="https://github.com/Sc0rpi0V/React" target="_blank" rel="noopener noreferrer" onClick={handleNavLinkClick}><FontAwesomeIcon title="React" icon={faGithub} /></a></li>
-                    <li><a href="https://github.com/Sc0rpi0V/local-wordpress" target="_blank" rel="noopener noreferrer" onClick={handleNavLinkClick}><FontAwesomeIcon title="Wordpress" icon={faGithub} /></a></li>
+                    <li><a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" onClick={handleNavLinkClick}><FontAwesomeIcon title="Facebook" icon={faFacebook} /></a></li>
+                    <li>
+                        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+                        <a href="#" onClick={handleWhatsAppClick}><FontAwesomeIcon title="Whatsapp" icon={faWhatsapp} /></a>
+                    </li>
                 </ul>
             </div>
             <div className="principal-nav">
@@ -66,9 +77,8 @@ const Navigation = () => {
                     <li><a href="/" className="link-navigation" >{t('home')}</a></li>
                     <li><a href="/descriptionaboutme" className="link-navigation" >{t('about')}</a></li>
                     <li><a href="/exercice" className="link-navigation" >{t('exercice')}</a></li>
-                    <li><a href="/about" className="link-navigation" >Communication Animale</a></li>
-                    {user ? null : ( <li><a href="/auth" className="link-navigation" >Connexion</a></li>)}
-                    {user ? ( <li><a href="/account" className="link-navigation">Mon Compte</a></li> ) : null}
+                    {user ? null : ( <li><a href="/auth" className="link-navigation" >{t('login')}</a></li>)}
+                    {user ? ( <li><a href="/account" className="link-navigation">{t('myAccount')}</a></li> ) : null}
                     {user ? ( <Disconnect /> ) : null}
                 </ul>
             </div>
