@@ -84,6 +84,7 @@ i18next.use(initReactI18next).init({
         exercice: 'Exercices',
         home: 'Accueil' ,
         about: 'A Propos',
+        myAccount: 'Mon Compte',
 
         //SignUp
         createAccount: 'Créer un compte',
@@ -504,6 +505,7 @@ i18next.use(initReactI18next).init({
         exercice: 'Exercices',
         home: 'Home',
         about: 'About',
+        myAccount: 'My Account',
 
         //SignUp
         createAccount: 'Create an Account',
