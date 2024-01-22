@@ -16,7 +16,7 @@ const Anchoring = () => {
                     <p>{t('firstpAnchoring')}</p>
                     <p>{t('secondpAnchoring')}</p>
                     <p>{t('thirdpAnchoring')}</p>
-                    <ul>
+                    <ul className="anchoring-list">
                         <li>{t('firstListAnchoring')}</li>
                         <li>{t('secondListAnchoring')}</li>
                         <li>{t('thirdListAnchoring')}</li>

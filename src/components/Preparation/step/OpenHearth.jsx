@@ -14,7 +14,7 @@ const OpenHearth = () => {
                 <div className="container-openhearth">
                     <h2>{t('firstpOpenHearth')}</h2>
                     <p>{t('secondpOpenHearth')} 
-                        <a href="https://www.youtube.com/watch?v=SNykLYJYles" target="_blank" rel="noopener noreferrer"> Musique </a>
+                        <a href="https://www.youtube.com/watch?v=SNykLYJYles" target="_blank" rel="noopener noreferrer"> {t('musicOpenHearth')} </a>
                     </p>
                     <p>{t('thirdpOpenHearth')}</p>
                     <p>{t('fourthpOpenHearth')}</p>

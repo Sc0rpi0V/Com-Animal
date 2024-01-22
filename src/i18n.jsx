@@ -165,15 +165,19 @@ i18next.use(initReactI18next).init({
         titleOpenHearth: 'La deuxième étape: l\'Ouverture du coeur.',
         firstpOpenHearth: 'Quelques exercices pour vous permettre de ressentir l\'ouverture du coeur et l\'énergie d\'amour.',
         secondpOpenHearth: 'Voici une musique à écouter :',
+        musicOpenHearth: 'Fréquence de l\'Amour, fréquence miraculeuse',
         thirdpOpenHearth: 'Demandez à une personne que vous connaissez de faire cet exercice avec vous: asseyez-vous face à face, assez proche pour pouvoir vous toucher et respirez profondément. Ensuite, posez l\'intention de transmettre tout votre amour à l\'autre au travers de votre respiration. Vous pouvez imaginer une "énergie", des coeurs, une lumière qui part de votre coeur et qui va jusqu\'au coeur de votre compagne/compagnon lors de votre expiration.',
         fourthpOpenHearth: 'Variante: faire traverser l\'énergie par vos bras, vos mains jusque dans les mains de votre partenaire. Faites un débriefing des sensations de chacun-e et ensuite inversez les rôles. Vous pouvez aussi mettre une musique inspirante pendant l\'exercice.',
         fifthpOpenHearth: 'Mettez-vous en état de relaxation grâce à de la musique, un accompagnement ou simplement par la respiration et posez votre attention sur votre chackra du couer ou votre coeur physique et respirer profondément pendant plusieurs minutes en observant ce que vous ressentez, ce qu\'il se passe en vous. Accueillez les images, les sensations, les odeurs, les sons....',
         
         //Relaxation
         titleRelaxation: 'La troisième étape: la relaxation',
+        subtitleRelaxation: 'Qu\'est ce que l\'état Alpha ?',
         firstpRelaxation: 'Vous vous en serez douté, pour capter une information qui reste subtile, il est nécessaire d\'être détendu-e et relaxé-e. C\'est ce qui est appelé l\'état modifié de conscience "alpha". Dans cet état d\'être, vos pensées sont moins présentes, votre respiration plus lente, votre corps détendu et vos émotions au calme. ',
         secondpRelaxation: 'Des méditations, des exercices de respiration, du yoga, de la sophrologie,.... sont des outils qui peuvent être interessants pour cela. Et le nec plus ultra, c\'est que tout ce que vous mettrez en pratique dans ce sens vous aidera dans votre quotidien à vivre avec sérénité et loin des tensions de notre société.',
-        
+        thirdpRelaxation: 'Cet état particulier de conscience se caractérise par une diminution de l\'activité mentale, une respiration plus lente, une détente corporelle accrue, et un calme émotionnel. Lorsque vous vous trouvez dans cet état, vos pensées sont moins envahissantes, votre respiration devient plus profonde et régulière, votre corps se relâche, et vos émotions sont apaisées.',
+        fourthpRelaxation: 'Il est souligné que les bénéfices de ces pratiques ne se limitent pas à la communication animale. En effet, tout ce que vous intégrez dans votre vie quotidienne pour favoriser la détente et la relaxation contribuera à vivre avec plus de sérénité et à éloigner les tensions induites par les défis de la société moderne.',
+
         //Spirit
         titleSpirit: 'La quatrième étape: la connexion',
         subtitleSpirit: 'Vous voila enfin prêt à vous connecter à un animal! Voilà génial mais comment fait-on maintenant?',
@@ -581,15 +585,19 @@ i18next.use(initReactI18next).init({
         titleOpenHearth: 'The second stage: Opening the heart.',
         firstpOpenHearth: 'Some exercises to allow you to feel the opening of the heart and the energy of love.',
         secondpOpenHearth: 'Here is some music to listen to:',
+        musicOpenHearth: 'Frequency of Love, miraculous frequency',
         thirdpOpenHearth: 'Ask someone you know to do this exercise with you: sit face to face, close enough to touch, and breathe deeply. Then, set the intention to transmit all your love to the other person through your breathing. You can imagine an "energy", hearts, a light which starts from your heart and which goes to the heart of your partner when you exhale.',
         fourthpOpenHearth: 'Variation: pass the energy through your arms, your hands into the hands of your partner. Debrief everyone\'s feelings and then reverse roles. You can also play inspiring music while exercising.',
         fifthpOpenHearth: 'Put yourself in a state of relaxation through music, accompaniment or simply through breathing and place your attention on your heart chakra or your physical heart and breathe deeply for several minutes observing what you feel, what it is happening inside you. Welcome the images, the sensations, the smells, the sounds....',
         
         //Relaxation
         titleRelaxation: 'The third stage: relaxation',
+        subtitleRelaxation: 'What is Alpha state ?',
         firstpRelaxation: 'As you will have suspected, to capture information that remains subtle, it is necessary to be relaxed and relaxed. This is what is called the “alpha” altered state of consciousness. In this state of being, your thoughts are less present, your breathing slower, your body relaxed and your emotions calm.',
         secondpRelaxation: 'Meditations, breathing exercises, yoga, sophrology, etc. are tools that can be useful for this. And the ultimate is that everything you put into practice in this direction will help you in your daily life to live with serenity and far from the tensions of our society.',
-        
+        thirdpRelaxation: 'This particular state of consciousness is characterized by decreased mental activity, slower breathing, increased bodily relaxation, and emotional calm. When you are in this state, your thoughts are less intrusive, your breathing becomes deeper and more regular, your body relaxes, and your emotions are calmed.',
+        fourthpRelaxation: 'It is emphasized that the benefits of these practices are not limited to animal communication. Indeed, everything you integrate into your daily life to promote rest and relaxation will help you live with more serenity and keep away the tensions induced by the challenges of modern society.',
+
         //Spirit
         titleSpirit: 'The fourth step: connection',
         subtitleSpirit: 'You are finally ready to connect with an animal! That’s great, but what do we do now?',

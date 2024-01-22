@@ -12,8 +12,11 @@ const Relaxation = () => {
                 <h1>{t('titleRelaxation')}</h1>
                 <hr />
                 <div className="container-relaxation">
+                    <h2>{t('subtitleRelaxation')}</h2>
                     <p>{t('firstpRelaxation')}</p>
                     <p>{t('secondpRelaxation')}</p>
+                    <p>{t('thirdpRelaxation')}</p>
+                    <p>{t('fourthpRelaxation')}</p>
                 </div>
             </section>
         </>

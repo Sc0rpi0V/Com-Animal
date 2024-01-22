@@ -17,7 +17,7 @@ const ContactMe = () => {
                     <input type="text" id="prenom" placeholder={t('labelFirstName')}/>
                     <label htmlFor="mail">{t('mail')}</label>
                     <input type="mail" id="mail" placeholder={t('labelMail')}/>
-                    <label htmlFor="message"></label>
+                    <label htmlFor="message">{t('labelMessage')}</label>
                     <textarea name="message" id="message" cols="30" rows="10"
                         placeholder={t('labelMessage')}></textarea>
                     <button className="contact-btn">{t('sendMessage')}</button>
