@@ -54,6 +54,23 @@ h2 {
     color: #f1f1f1;
 }
 
+.anchoring-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 2rem 1rem 9rem;
+    color: #f1f1f1;
+}
+
+.anchoring-list li:before {
+    content: '\2022';
+    color: white; 
+    font-weight: bold;
+    display: inline-block;
+    width: 1em; 
+    margin-left: -1em;
+    margin-top: 1em;
+}
+
 .anchoring h2 {
     color: #f1f1f1;
     margin: 3rem 0;;
