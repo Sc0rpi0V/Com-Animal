@@ -1,10 +1,12 @@
 import React from "react";
 import './style/Header.css';
 import { useTranslation } from "react-i18next";
+import { useAuth } from "../../AuthContext";
 
 const Header = () => {
 
   const { t } = useTranslation();
+  const { user } = useAuth();
 
   return (
     <header id="home" className="header-home">
@@ -15,7 +17,7 @@ const Header = () => {
       <div className="home-btns">
         <a href="/descriptionaboutcom" className="home-btn home-btn1" rel="noopener noreferrer">{t('aboutCom')}</a>
         <a href="/contactme" className="home-btn home-btn2" rel="noopener noreferrer">{t('contactMe')}</a>
-        <a href="/showecommerce" className="home-btn home-btn3" rel="noopener noreferrer">{t('training')}</a>
+        {user ? (<a href="/showecommerce" className="home-btn home-btn3" rel="noopener noreferrer">{t('training')}</a>) : null}
       </div>
     </header>
   );

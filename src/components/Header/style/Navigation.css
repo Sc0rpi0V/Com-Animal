@@ -88,6 +88,13 @@ nav {
   justify-content: center;
   opacity: 0;
   background: #0b0b0b;
+  pointer-events: none;
+}
+
+nav.active .principal-nav ul {
+  opacity: 1;
+  transition: opacity 0.2s ease-in 0.5s;
+  pointer-events: auto;
 }
 
 .principal-nav ul li {

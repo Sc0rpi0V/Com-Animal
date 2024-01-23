@@ -4,7 +4,7 @@ import logo from "../../img/logo.jpeg";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faWhatsapp} from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faWhatsapp, faInstagram} from "@fortawesome/free-brands-svg-icons";
 import { useAuth } from "../../AuthContext";
 import Disconnect from '../Disconnect/Disconnect';
 // eslint-disable-next-line
@@ -65,10 +65,20 @@ const Navigation = () => {
             </NavLink>
             <div className="social-nav">
                 <ul>
-                    <li><a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" onClick={handleNavLinkClick}><FontAwesomeIcon title="Facebook" icon={faFacebook} /></a></li>
+                    <li>
+                        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" onClick={handleNavLinkClick}>
+                            <FontAwesomeIcon title="Facebook" icon={faFacebook} />
+                        </a>
+                    </li>
                     <li>
                         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                         <a href="#" onClick={handleWhatsAppClick}><FontAwesomeIcon title="Whatsapp" icon={faWhatsapp} /></a>
+                    </li>
+                    <li>
+                        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+                        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" onClick={handleNavLinkClick}>
+                            <FontAwesomeIcon title="Instagram" icon={faInstagram} />
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -88,7 +98,6 @@ const Navigation = () => {
                     <option value="en">EN</option>
                 </select>
             </div>
-            <div className="cursor"></div>
             <div className="burger" onClick={handleBurgerClick}>
                 <div className="burger-ligne"></div>
                 <div className="burger-ligne"></div>
